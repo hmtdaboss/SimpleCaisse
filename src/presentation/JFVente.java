@@ -463,6 +463,17 @@ public class JFVente extends javax.swing.JFrame {
         jButtonAdmin = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButtonLogout = new javax.swing.JButton();
+        jLabel44 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
         jLabelTopMenuBG = new javax.swing.JLabel();
         jPanelKeyPadRight = new javax.swing.JPanel();
         jButtonSousTo = new javax.swing.JButton();
@@ -702,6 +713,7 @@ public class JFVente extends javax.swing.JFrame {
         jPanelLangue = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
         jTextFieldLangue = new javax.swing.JTextField();
+        jPanel2 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -1047,7 +1059,73 @@ public class JFVente extends javax.swing.JFrame {
         jPanelTopMenu.add(jButtonLogout);
         jButtonLogout.setBounds(890, 0, 120, 80);
 
-        jLabelTopMenuBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/menuVente3.png"))); // NOI18N
+        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel44.setText("Menu");
+        jLabel44.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabel44);
+        jLabel44.setBounds(0, 80, 110, 20);
+
+        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel46.setText("Logout");
+        jLabel46.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabel46);
+        jLabel46.setBounds(908, 80, 90, 20);
+
+        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel48.setText("Dernier Ticket");
+        jLabel48.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabel48);
+        jLabel48.setBounds(810, 80, 100, 20);
+
+        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel51.setText("Administateur");
+        jLabel51.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabel51);
+        jLabel51.setBounds(710, 80, 100, 20);
+
+        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel53.setText("Ouvrir");
+        jLabel53.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabel53);
+        jLabel53.setBounds(620, 80, 80, 20);
+
+        jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel54.setText("Retour Artic.");
+        jLabel54.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabel54);
+        jLabel54.setBounds(540, 80, 80, 20);
+
+        jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel55.setText("Remise Gen.");
+        jLabel55.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabel55);
+        jLabel55.setBounds(460, 80, 80, 20);
+
+        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel56.setText("Annuler Vente");
+        jLabel56.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabel56);
+        jLabel56.setBounds(350, 80, 110, 20);
+
+        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel57.setText("Attente");
+        jLabel57.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabel57);
+        jLabel57.setBounds(270, 80, 80, 20);
+
+        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel58.setText("Sup. Article");
+        jLabel58.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabel58);
+        jLabel58.setBounds(190, 80, 80, 20);
+
+        jLabel59.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel59.setText("Artcile");
+        jLabel59.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabel59);
+        jLabel59.setBounds(110, 80, 80, 20);
+
+        jLabelTopMenuBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/menuVente3.jpg"))); // NOI18N
         jPanelTopMenu.add(jLabelTopMenuBG);
         jLabelTopMenuBG.setBounds(1, -4, 1005, 110);
 
@@ -3085,6 +3163,17 @@ public class JFVente extends javax.swing.JFrame {
 
         jPanelCardVendeur.add(jPanelLangue, "card10");
 
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout jPanelMenuVendeurLayout = new javax.swing.GroupLayout(jPanelMenuVendeur);
         jPanelMenuVendeur.setLayout(jPanelMenuVendeurLayout);
         jPanelMenuVendeurLayout.setHorizontalGroup(
@@ -3131,6 +3220,11 @@ public class JFVente extends javax.swing.JFrame {
                     .addGap(623, 623, 623)
                     .addComponent(jButtonLangue, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addContainerGap(310, Short.MAX_VALUE)))
+            .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelMenuVendeurLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         jPanelMenuVendeurLayout.setVerticalGroup(
             jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3154,6 +3248,11 @@ public class JFVente extends javax.swing.JFrame {
                 .addGroup(jPanelMenuVendeurLayout.createSequentialGroup()
                     .addComponent(jButtonLangue, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 612, Short.MAX_VALUE)))
+            .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelMenuVendeurLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanelCard.add(jPanelMenuVendeur, "card5");
@@ -3170,7 +3269,7 @@ public class JFVente extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelCard, javax.swing.GroupLayout.DEFAULT_SIZE, 1008, Short.MAX_VALUE)
+            .addComponent(jPanelCard, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -4505,12 +4604,23 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
@@ -4555,6 +4665,7 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel1Peripherique;
     private javax.swing.JPanel jPanel1TicketRaMen;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
