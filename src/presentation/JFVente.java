@@ -7,7 +7,6 @@ package presentation;
 
 import Utile.MethodeUtile;
 import Utile.PeripheriqueXML;
-import Utile.Registre;
 import afficheurLed.CodesEpson;
 import afficheurLed.ESCPOS;
 import afficheurLed.UtilisationFlux;
@@ -42,6 +41,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
@@ -147,10 +147,14 @@ public class JFVente extends javax.swing.JFrame {
     private int nbArticle = 0;
     private int nbPieces = 0;
 
-    
     /*Pour les detaille des ventes */
     private int idEmpDetail = 0;
-    private int idCalDetail =0;
+    private int idCalDetail = 0;
+    
+    /*Multi langues*/
+    String path ;
+    ResourceBundle lang_var ;
+
     public JFVente() {
         initComponents();
         keyPadCreate();
@@ -172,6 +176,9 @@ public class JFVente extends javax.swing.JFrame {
     /*Set le focus */
     private void initSmallThings() {
         jPasswordField.requestFocusInWindow();
+        path = "langues.langue_"+jTextFieldLangue.getText();
+        lang_var = ResourceBundle.getBundle(path);
+        
         try {
             utilFluxLed = new UtilisationFlux(peri.getBalise(peri.CUSTOMER_DISPLAY_PORT));
         } catch (Exception e) {
@@ -244,6 +251,8 @@ public class JFVente extends javax.swing.JFrame {
         codebarreArea.setBackground(new Color(134, 185, 236));
 
     }
+
+   
     /*On format les variable sous forme x.00 euro*/
 
     private void formatVarible() {
@@ -540,6 +549,7 @@ public class JFVente extends javax.swing.JFrame {
         jButtonLogOut2 = new javax.swing.JButton();
         jButtonTicketRayon = new javax.swing.JButton();
         jButtonPeripherique = new javax.swing.JButton();
+        jButtonLangue = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jPanelCardVendeur = new javax.swing.JPanel();
         jPanelRechercheTicket = new javax.swing.JPanel();
@@ -689,6 +699,9 @@ public class JFVente extends javax.swing.JFrame {
         jScrollPane13 = new javax.swing.JScrollPane();
         jTablePrestation = new JTable(myModelTra);
         jLabel34 = new javax.swing.JLabel();
+        jPanelLangue = new javax.swing.JPanel();
+        jLabel25 = new javax.swing.JLabel();
+        jTextFieldLangue = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
@@ -1880,6 +1893,23 @@ public class JFVente extends javax.swing.JFrame {
             }
         });
 
+        jButtonLangue.setBackground(new java.awt.Color(204, 255, 153));
+        jButtonLangue.setForeground(new java.awt.Color(255, 51, 51));
+        jButtonLangue.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
+        jButtonLangue.setBorderPainted(false);
+        jButtonLangue.setContentAreaFilled(false);
+        jButtonLangue.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jButtonLangue.setFocusPainted(false);
+        jButtonLangue.setFocusable(false);
+        jButtonLangue.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonLangue.setName(""); // NOI18N
+        jButtonLangue.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonLangue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonLangueActionPerformed(evt);
+            }
+        });
+
         jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/menuVente4.png"))); // NOI18N
 
         jPanelCardVendeur.setLayout(new java.awt.CardLayout());
@@ -2047,7 +2077,7 @@ public class JFVente extends javax.swing.JFrame {
                         .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jSeparator14)
                     .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3023,6 +3053,38 @@ public class JFVente extends javax.swing.JFrame {
 
         jPanelCardVendeur.add(jPanelPrestation, "card6");
 
+        jLabel25.setText("jLabel25");
+
+        jTextFieldLangue.setText("en");
+        jTextFieldLangue.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldLangueActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanelLangueLayout = new javax.swing.GroupLayout(jPanelLangue);
+        jPanelLangue.setLayout(jPanelLangueLayout);
+        jPanelLangueLayout.setHorizontalGroup(
+            jPanelLangueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLangueLayout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(jLabel25)
+                .addGap(18, 18, 18)
+                .addComponent(jTextFieldLangue, javax.swing.GroupLayout.PREFERRED_SIZE, 337, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(554, Short.MAX_VALUE))
+        );
+        jPanelLangueLayout.setVerticalGroup(
+            jPanelLangueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelLangueLayout.createSequentialGroup()
+                .addGap(96, 96, 96)
+                .addGroup(jPanelLangueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel25)
+                    .addComponent(jTextFieldLangue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(465, Short.MAX_VALUE))
+        );
+
+        jPanelCardVendeur.add(jPanelLangue, "card10");
+
         javax.swing.GroupLayout jPanelMenuVendeurLayout = new javax.swing.GroupLayout(jPanelMenuVendeur);
         jPanelMenuVendeur.setLayout(jPanelMenuVendeurLayout);
         jPanelMenuVendeurLayout.setHorizontalGroup(
@@ -3061,9 +3123,14 @@ public class JFVente extends javax.swing.JFrame {
                 .addGap(10, 10, 10))
             .addGroup(jPanelMenuVendeurLayout.createSequentialGroup()
                 .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 1030, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanelCardVendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jPanelCardVendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel11))
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelMenuVendeurLayout.createSequentialGroup()
+                    .addGap(623, 623, 623)
+                    .addComponent(jButtonLangue, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(310, Short.MAX_VALUE)))
         );
         jPanelMenuVendeurLayout.setVerticalGroup(
             jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3083,6 +3150,10 @@ public class JFVente extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanelCardVendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelMenuVendeurLayout.createSequentialGroup()
+                    .addComponent(jButtonLangue, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 612, Short.MAX_VALUE)))
         );
 
         jPanelCard.add(jPanelMenuVendeur, "card5");
@@ -3099,13 +3170,11 @@ public class JFVente extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanelCard, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, Short.MAX_VALUE)
+            .addComponent(jPanelCard, javax.swing.GroupLayout.DEFAULT_SIZE, 1008, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanelCard, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanelCard, javax.swing.GroupLayout.PREFERRED_SIZE, 685, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -3142,7 +3211,7 @@ public class JFVente extends javax.swing.JFrame {
     private void sousTotal() {
 
         if (listeVente.isEmpty()) {
-            JDialogMessages f = new JDialogMessages(this, "Vous n'avez pas fais de vente !", "");
+            JDialogMessages f = new JDialogMessages(this, lang_var.getString("message_invalide_vente"), "");
         } else {
             methodeUtile.changeFocus(jTextFieldMontantRecu);
             jLabelSTotal.setText(formatter.format(total));
@@ -3673,7 +3742,7 @@ public class JFVente extends javax.swing.JFrame {
         } else {
 
             try {
-                montTmp = Double.valueOf(jTextFieldMontantRecu.getText()) /100;
+                montTmp = Double.valueOf(jTextFieldMontantRecu.getText()) / 100;
             } catch (NumberFormatException e) {
                 JDialogMessages msg = new JDialogMessages(this, "Montant invalide. ", "");
 
@@ -3928,7 +3997,6 @@ public class JFVente extends javax.swing.JFrame {
         myModelET.setMyList(daoTrans.selectTotalEmp(idE, idCal));
         myModelAS.setMyList(daoArg.selectArgentSortie(idE, idCal));
         calculerTotalEtat(idCal, idE);
-        
 
     }
 
@@ -4235,7 +4303,7 @@ public class JFVente extends javax.swing.JFrame {
             this.idCalDetail = daoCal.idCalendrier(dateCur);
             afficherEtatCaisse(idCalDetail, idEmploye);
         }
-        
+
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -4268,6 +4336,15 @@ public class JFVente extends javax.swing.JFrame {
         refreshDayVente();
     }//GEN-LAST:event_jButton18ActionPerformed
 
+    private void jButtonLangueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLangueActionPerformed
+        // TODO add your handling code here:
+        methodeUtile.updatePanel(jPanelCardVendeur, jPanelLangue);
+    }//GEN-LAST:event_jButtonLangueActionPerformed
+
+    private void jTextFieldLangueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldLangueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldLangueActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -4298,11 +4375,11 @@ public class JFVente extends javax.swing.JFrame {
 
             //if (Registre.get("Identities", "safi").compareTo("safi") == 0) {
                 /* Create and display the form */
-                java.awt.EventQueue.invokeLater(new Runnable() {
-                    public void run() {
-                        new JFVente().setVisible(true);
-                    }
-                });
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new JFVente().setVisible(true);
+                }
+            });
             //}
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Vous avez voler ce logiciel. Veuillez vous rendre au commissariat "
@@ -4358,6 +4435,7 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JButton jButtonEtatCaisse;
     private javax.swing.JButton jButtonFois;
     private javax.swing.JButton jButtonImprimer;
+    private javax.swing.JButton jButtonLangue;
     private javax.swing.JButton jButtonLesVente;
     private javax.swing.JButton jButtonListeRapide;
     private javax.swing.JButton jButtonLogOut2;
@@ -4406,6 +4484,7 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
@@ -4489,6 +4568,7 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelGridRapiCat;
     private javax.swing.JPanel jPanelKep;
     private javax.swing.JPanel jPanelKeyPadRight;
+    private javax.swing.JPanel jPanelLangue;
     private javax.swing.JPanel jPanelListeRapide;
     private javax.swing.JPanel jPanelLogEnter;
     private javax.swing.JPanel jPanelLogin;
@@ -4568,6 +4648,7 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JTable jTableSousTotal;
     private javax.swing.JTable jTableTotTVA;
     private javax.swing.JTable jTableVente;
+    private javax.swing.JTextField jTextFieldLangue;
     private javax.swing.JTextField jTextFieldMontantRecu;
     private javax.swing.JTextField jTextFieldSearch;
     private javax.swing.JTextPane jTextPaneRaison;
