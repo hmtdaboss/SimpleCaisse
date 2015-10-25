@@ -171,12 +171,13 @@ public class JFVente extends javax.swing.JFrame {
         initialisercomboboxPort(jComboDisplayClientPort);
         initialisercomboboxPort(jComboPrinterTicketPort);
         initialisercomboboxPort(jComboTicketRayPort);
+        initAppLanguage();
     }
 
     /*Set le focus */
     private void initSmallThings() {
         jPasswordField.requestFocusInWindow();
-        path = "langues.langue_"+jTextFieldLangue.getText();
+        path = "langues.langue_en";
         lang_var = ResourceBundle.getBundle(path);
         
         try {
@@ -194,6 +195,7 @@ public class JFVente extends javax.swing.JFrame {
         combobox_port.setSelectedItem(this.peri.getBalise(combobox_port.getAccessibleContext().getAccessibleName()));
     }
 
+    
     private void initialisercomboxPrinter(javax.swing.JComboBox combobox_printers) {
         PrintRequestAttributeSet pras = new HashPrintRequestAttributeSet();
         DocFlavor flavor = DocFlavor.INPUT_STREAM.AUTOSENSE;
@@ -225,6 +227,40 @@ public class JFVente extends javax.swing.JFrame {
         DateFormat shortDateFormat = DateFormat.getDateTimeInstance(DateFormat.SHORT, DateFormat.SHORT);
         jLabelDateTrans.setText(shortDateFormat.format(aujourdhui));
 
+    }
+    
+    private void initAppLanguage(){
+       
+        
+        /*Menu vente langues */
+        jLabelMenu.setText(lang_var.getString("top_menu"));
+        jLabelArticle1.setText(lang_var.getString("top_article"));
+        jLabelSuppArticle.setText(lang_var.getString("top_sup_art"));
+        jLabelAttente.setText(lang_var.getString("top_attente"));
+        jLabelAnnulerVente.setText(lang_var.getString("top_annuler_vente"));
+        jLabelRemiseGeneral.setText(lang_var.getString("top_remise_gen"));
+        jLabelRetourArtic.setText(lang_var.getString("top_retour_article"));
+        jLabelOuvrir.setText(lang_var.getString("top_ouvrir"));
+        jLabelAdmin.setText(lang_var.getString("top_administrateur"));
+        jLabelDernierTicket.setText(lang_var.getString("top_dernier_ticket"));
+        jLabelLogout.setText(lang_var.getString("top_logout"));
+        
+        jLabelLesVentes.setText(lang_var.getString("config_les_ventes"));
+        jLabelSortirArgent.setText(lang_var.getString("config_sortir_argent"));
+        jLabelPrestation.setText(lang_var.getString("config_prestation"));
+        jLabelEtatCaisse.setText(lang_var.getString("config_etat_caisse"));
+        jLabelListRapide.setText(lang_var.getString("config_liste_rapide"));
+        jLabelPeripherique.setText(lang_var.getString("config_peripherique"));
+        jLabelConfigMsg.setText(lang_var.getString("config_config_msg"));
+        jLabelLangue.setText(lang_var.getString("config_langue"));
+        jLabelTicketRayon.setText(lang_var.getString("config_ticket_rayon"));
+        jLabelRetourMV.setText(lang_var.getString("config_retour"));
+        jLabelLogoutMV.setText(lang_var.getString("config_logout"));
+        
+        
+      //  jLabel.setText(lang_var.getString("article"));
+       
+        
     }
 
     private void remiseAZero() {
@@ -463,17 +499,17 @@ public class JFVente extends javax.swing.JFrame {
         jButtonAdmin = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
         jButtonLogout = new javax.swing.JButton();
-        jLabel44 = new javax.swing.JLabel();
-        jLabel46 = new javax.swing.JLabel();
-        jLabel48 = new javax.swing.JLabel();
-        jLabel51 = new javax.swing.JLabel();
-        jLabel53 = new javax.swing.JLabel();
-        jLabel54 = new javax.swing.JLabel();
-        jLabel55 = new javax.swing.JLabel();
-        jLabel56 = new javax.swing.JLabel();
-        jLabel57 = new javax.swing.JLabel();
-        jLabel58 = new javax.swing.JLabel();
-        jLabel59 = new javax.swing.JLabel();
+        jLabelMenu = new javax.swing.JLabel();
+        jLabelLogout = new javax.swing.JLabel();
+        jLabelDernierTicket = new javax.swing.JLabel();
+        jLabelAdmin = new javax.swing.JLabel();
+        jLabelOuvrir = new javax.swing.JLabel();
+        jLabelRetourArtic = new javax.swing.JLabel();
+        jLabelRemiseGeneral = new javax.swing.JLabel();
+        jLabelAnnulerVente = new javax.swing.JLabel();
+        jLabelAttente = new javax.swing.JLabel();
+        jLabelSuppArticle = new javax.swing.JLabel();
+        jLabelArticle1 = new javax.swing.JLabel();
         jLabelTopMenuBG = new javax.swing.JLabel();
         jPanelKeyPadRight = new javax.swing.JPanel();
         jButtonSousTo = new javax.swing.JButton();
@@ -508,7 +544,7 @@ public class JFVente extends javax.swing.JFrame {
         jLabelBackround = new javax.swing.JLabel();
         jPanelGridRapiCat = new javax.swing.JPanel();
         jPanelProdRapid = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabelMsgListeRapide = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jPanelPayement = new javax.swing.JPanel();
         jPanelTopMenST = new javax.swing.JPanel();
@@ -550,6 +586,19 @@ public class JFVente extends javax.swing.JFrame {
         jSeparator2 = new javax.swing.JSeparator();
         jLabelImageSt = new javax.swing.JLabel();
         jPanelMenuVendeur = new javax.swing.JPanel();
+        jPanelVendeurTM = new javax.swing.JPanel();
+        jLabelLogoutMV = new javax.swing.JLabel();
+        jLabelLesVentes = new javax.swing.JLabel();
+        jLabelSortirArgent = new javax.swing.JLabel();
+        jLabelPrestation = new javax.swing.JLabel();
+        jLabelEtatCaisse = new javax.swing.JLabel();
+        jLabelListRapide = new javax.swing.JLabel();
+        jLabelPeripherique = new javax.swing.JLabel();
+        jLabelConfigMsg = new javax.swing.JLabel();
+        jLabelLangue = new javax.swing.JLabel();
+        jLabelTicketRayon = new javax.swing.JLabel();
+        jLabelRetourMV = new javax.swing.JLabel();
+        jLabelBackground = new javax.swing.JLabel();
         jButtonConfigMsg = new javax.swing.JButton();
         jButtonSortirArg = new javax.swing.JButton();
         jButtonPrestation = new javax.swing.JButton();
@@ -561,7 +610,6 @@ public class JFVente extends javax.swing.JFrame {
         jButtonTicketRayon = new javax.swing.JButton();
         jButtonPeripherique = new javax.swing.JButton();
         jButtonLangue = new javax.swing.JButton();
-        jLabel11 = new javax.swing.JLabel();
         jPanelCardVendeur = new javax.swing.JPanel();
         jPanelRechercheTicket = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -573,17 +621,17 @@ public class JFVente extends javax.swing.JFrame {
         jButton9 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jMonthChooser1 = new com.toedter.calendar.JMonthChooser();
-        jLabel3 = new javax.swing.JLabel();
+        jLabelLesVenteDu = new javax.swing.JLabel();
         jLabelDateJour = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
+        jLabelNombreClient = new javax.swing.JLabel();
         jSeparator6 = new javax.swing.JSeparator();
         jLabelNbClients = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
+        jLabelNombreClient1 = new javax.swing.JLabel();
         jLabelNbClientsTot = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
+        jLabelLesVenteduMois = new javax.swing.JLabel();
         jLabelMoisTot = new javax.swing.JLabel();
         jSeparator13 = new javax.swing.JSeparator();
         jButton10 = new javax.swing.JButton();
@@ -1059,71 +1107,71 @@ public class JFVente extends javax.swing.JFrame {
         jPanelTopMenu.add(jButtonLogout);
         jButtonLogout.setBounds(890, 0, 120, 80);
 
-        jLabel44.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel44.setText("Menu");
-        jLabel44.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanelTopMenu.add(jLabel44);
-        jLabel44.setBounds(0, 80, 110, 20);
+        jLabelMenu.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelMenu.setText("Menu");
+        jLabelMenu.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabelMenu);
+        jLabelMenu.setBounds(0, 80, 110, 20);
 
-        jLabel46.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel46.setText("Logout");
-        jLabel46.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanelTopMenu.add(jLabel46);
-        jLabel46.setBounds(908, 80, 90, 20);
+        jLabelLogout.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelLogout.setText("Logout");
+        jLabelLogout.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabelLogout);
+        jLabelLogout.setBounds(908, 80, 90, 20);
 
-        jLabel48.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel48.setText("Dernier Ticket");
-        jLabel48.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanelTopMenu.add(jLabel48);
-        jLabel48.setBounds(810, 80, 100, 20);
+        jLabelDernierTicket.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelDernierTicket.setText("Dernier Ticket");
+        jLabelDernierTicket.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabelDernierTicket);
+        jLabelDernierTicket.setBounds(810, 80, 100, 20);
 
-        jLabel51.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel51.setText("Administateur");
-        jLabel51.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanelTopMenu.add(jLabel51);
-        jLabel51.setBounds(710, 80, 100, 20);
+        jLabelAdmin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelAdmin.setText("Administateur");
+        jLabelAdmin.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabelAdmin);
+        jLabelAdmin.setBounds(710, 80, 100, 20);
 
-        jLabel53.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel53.setText("Ouvrir");
-        jLabel53.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanelTopMenu.add(jLabel53);
-        jLabel53.setBounds(620, 80, 80, 20);
+        jLabelOuvrir.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelOuvrir.setText("Ouvrir");
+        jLabelOuvrir.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabelOuvrir);
+        jLabelOuvrir.setBounds(620, 80, 80, 20);
 
-        jLabel54.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel54.setText("Retour Artic.");
-        jLabel54.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanelTopMenu.add(jLabel54);
-        jLabel54.setBounds(540, 80, 80, 20);
+        jLabelRetourArtic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelRetourArtic.setText("Retour Artic.");
+        jLabelRetourArtic.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabelRetourArtic);
+        jLabelRetourArtic.setBounds(540, 80, 80, 20);
 
-        jLabel55.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel55.setText("Remise Gen.");
-        jLabel55.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanelTopMenu.add(jLabel55);
-        jLabel55.setBounds(460, 80, 80, 20);
+        jLabelRemiseGeneral.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelRemiseGeneral.setText("Remise Gen.");
+        jLabelRemiseGeneral.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabelRemiseGeneral);
+        jLabelRemiseGeneral.setBounds(460, 80, 80, 20);
 
-        jLabel56.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel56.setText("Annuler Vente");
-        jLabel56.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanelTopMenu.add(jLabel56);
-        jLabel56.setBounds(350, 80, 110, 20);
+        jLabelAnnulerVente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelAnnulerVente.setText("Annuler Vente");
+        jLabelAnnulerVente.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabelAnnulerVente);
+        jLabelAnnulerVente.setBounds(350, 80, 110, 20);
 
-        jLabel57.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel57.setText("Attente");
-        jLabel57.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanelTopMenu.add(jLabel57);
-        jLabel57.setBounds(270, 80, 80, 20);
+        jLabelAttente.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelAttente.setText("Attente");
+        jLabelAttente.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabelAttente);
+        jLabelAttente.setBounds(270, 80, 80, 20);
 
-        jLabel58.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel58.setText("Sup. Article");
-        jLabel58.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanelTopMenu.add(jLabel58);
-        jLabel58.setBounds(190, 80, 80, 20);
+        jLabelSuppArticle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelSuppArticle.setText("Sup. Article");
+        jLabelSuppArticle.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabelSuppArticle);
+        jLabelSuppArticle.setBounds(190, 80, 80, 20);
 
-        jLabel59.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel59.setText("Artcile");
-        jLabel59.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanelTopMenu.add(jLabel59);
-        jLabel59.setBounds(110, 80, 80, 20);
+        jLabelArticle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelArticle1.setText("Artcile");
+        jLabelArticle1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jPanelTopMenu.add(jLabelArticle1);
+        jLabelArticle1.setBounds(110, 80, 80, 20);
 
         jLabelTopMenuBG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/menuVente3.jpg"))); // NOI18N
         jPanelTopMenu.add(jLabelTopMenuBG);
@@ -1405,8 +1453,8 @@ public class JFVente extends javax.swing.JFrame {
         jPanelProdRapid.setPreferredSize(new java.awt.Dimension(100, 403));
         jPanelProdRapid.setLayout(new java.awt.GridLayout(5, 2));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel2.setText("Listes des Produits Rapide");
+        jLabelMsgListeRapide.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabelMsgListeRapide.setText("Listes des Produits Rapide");
 
         javax.swing.GroupLayout jPanelVenteLayout = new javax.swing.GroupLayout(jPanelVente);
         jPanelVente.setLayout(jPanelVenteLayout);
@@ -1422,7 +1470,7 @@ public class JFVente extends javax.swing.JFrame {
                     .addComponent(jPanelGridRapiCat, javax.swing.GroupLayout.PREFERRED_SIZE, 193, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanelVenteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jLabelMsgListeRapide, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanelTopMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -1439,7 +1487,7 @@ public class JFVente extends javax.swing.JFrame {
                             .addGroup(jPanelVenteLayout.createSequentialGroup()
                                 .addComponent(jPanelGridRapiCat, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(8, 8, 8)
-                                .addComponent(jLabel2)
+                                .addComponent(jLabelMsgListeRapide)
                                 .addGap(1, 1, 1)
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(7, 7, 7)
@@ -1817,6 +1865,67 @@ public class JFVente extends javax.swing.JFrame {
 
         jPanelCard.add(jPanelPayement, "card3");
 
+        jPanelVendeurTM.setLayout(null);
+
+        jLabelLogoutMV.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelLogoutMV.setText("Lougout");
+        jPanelVendeurTM.add(jLabelLogoutMV);
+        jLabelLogoutMV.setBounds(890, 80, 120, 30);
+
+        jLabelLesVentes.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelLesVentes.setText("Les Ventes");
+        jPanelVendeurTM.add(jLabelLesVentes);
+        jLabelLesVentes.setBounds(0, 80, 110, 30);
+
+        jLabelSortirArgent.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelSortirArgent.setText("Sortir Argent");
+        jPanelVendeurTM.add(jLabelSortirArgent);
+        jLabelSortirArgent.setBounds(110, 80, 80, 30);
+
+        jLabelPrestation.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPrestation.setText("Prestation");
+        jPanelVendeurTM.add(jLabelPrestation);
+        jLabelPrestation.setBounds(190, 80, 80, 30);
+
+        jLabelEtatCaisse.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelEtatCaisse.setText("Etat Caisse");
+        jPanelVendeurTM.add(jLabelEtatCaisse);
+        jLabelEtatCaisse.setBounds(270, 80, 80, 30);
+
+        jLabelListRapide.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelListRapide.setText("Liste Rapide");
+        jPanelVendeurTM.add(jLabelListRapide);
+        jLabelListRapide.setBounds(350, 80, 110, 30);
+
+        jLabelPeripherique.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelPeripherique.setText("Périphérique");
+        jPanelVendeurTM.add(jLabelPeripherique);
+        jLabelPeripherique.setBounds(460, 80, 80, 30);
+
+        jLabelConfigMsg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelConfigMsg.setText("Config Msg");
+        jPanelVendeurTM.add(jLabelConfigMsg);
+        jLabelConfigMsg.setBounds(540, 80, 80, 30);
+
+        jLabelLangue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelLangue.setText("Langue");
+        jPanelVendeurTM.add(jLabelLangue);
+        jLabelLangue.setBounds(620, 80, 80, 30);
+
+        jLabelTicketRayon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelTicketRayon.setText("Ticket Rayon");
+        jPanelVendeurTM.add(jLabelTicketRayon);
+        jLabelTicketRayon.setBounds(700, 80, 110, 30);
+
+        jLabelRetourMV.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelRetourMV.setText("Retour");
+        jPanelVendeurTM.add(jLabelRetourMV);
+        jLabelRetourMV.setBounds(810, 80, 80, 30);
+
+        jLabelBackground.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/menuVente4.png"))); // NOI18N
+        jPanelVendeurTM.add(jLabelBackground);
+        jLabelBackground.setBounds(0, 0, 1005, 105);
+
         jButtonConfigMsg.setBackground(new java.awt.Color(204, 255, 153));
         jButtonConfigMsg.setForeground(new java.awt.Color(255, 51, 51));
         jButtonConfigMsg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 255)));
@@ -1988,8 +2097,6 @@ public class JFVente extends javax.swing.JFrame {
             }
         });
 
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/menuVente4.png"))); // NOI18N
-
         jPanelCardVendeur.setLayout(new java.awt.CardLayout());
 
         jTableLesVentes.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
@@ -2033,14 +2140,14 @@ public class JFVente extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel3.setText("Les ventes du :");
+        jLabelLesVenteDu.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabelLesVenteDu.setText("Les ventes du :");
 
         jLabelDateJour.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabelDateJour.setText("jLabel8");
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel9.setText("Nombre de clients :");
+        jLabelNombreClient.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabelNombreClient.setText("Nombre de clients :");
 
         jLabelNbClients.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabelNbClients.setText("jLabel10");
@@ -2054,14 +2161,14 @@ public class JFVente extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel13.setText("Transaction avec cash  : ");
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel14.setText("Nombre de clients :");
+        jLabelNombreClient1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabelNombreClient1.setText("Nombre de clients :");
 
         jLabelNbClientsTot.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabelNbClientsTot.setText("jLabel8");
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel16.setText("Les ventes du mois de :");
+        jLabelLesVenteduMois.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabelLesVenteduMois.setText("Les ventes du mois de :");
 
         jLabelMoisTot.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabelMoisTot.setText("jLabel8");
@@ -2106,11 +2213,11 @@ public class JFVente extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jSeparator13)
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel16)
+                                    .addComponent(jLabelLesVenteduMois)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabelMoisTot))
                                 .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addComponent(jLabel14)
+                                    .addComponent(jLabelNombreClient1)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabelNbClientsTot)))
                             .addGap(25, 25, 25))
@@ -2140,11 +2247,11 @@ public class JFVente extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
+                                        .addComponent(jLabelLesVenteDu)
                                         .addGap(42, 42, 42)
                                         .addComponent(jLabelDateJour))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addComponent(jLabel9)
+                                        .addComponent(jLabelNombreClient)
                                         .addGap(18, 18, 18)
                                         .addComponent(jLabelNbClients)))
                                 .addGap(0, 0, Short.MAX_VALUE))))
@@ -2166,24 +2273,24 @@ public class JFVente extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel16)
+                                .addComponent(jLabelLesVenteduMois)
                                 .addComponent(jLabelMoisTot))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jSeparator13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabelNbClientsTot)
-                                .addComponent(jLabel14)))
+                                .addComponent(jLabelNombreClient1)))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel3)
+                                .addComponent(jLabelLesVenteDu)
                                 .addComponent(jLabelDateJour))
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addComponent(jSeparator6, javax.swing.GroupLayout.PREFERRED_SIZE, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                 .addComponent(jLabelNbClients)
-                                .addComponent(jLabel9)))
+                                .addComponent(jLabelNombreClient)))
                         .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -3211,9 +3318,7 @@ public class JFVente extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(10, 10, 10))
             .addGroup(jPanelMenuVendeurLayout.createSequentialGroup()
-                .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanelCardVendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11))
+                .addComponent(jPanelCardVendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 1008, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelMenuVendeurLayout.createSequentialGroup()
@@ -3225,34 +3330,40 @@ public class JFVente extends javax.swing.JFrame {
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanelVendeurTM, javax.swing.GroupLayout.DEFAULT_SIZE, 1008, Short.MAX_VALUE))
         );
         jPanelMenuVendeurLayout.setVerticalGroup(
             jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanelMenuVendeurLayout.createSequentialGroup()
-                .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel11)
-                    .addComponent(jButtonListeRapide, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonPeripherique, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonTicketRayon, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonRetourMV, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonLogOut2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonLesVente, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonEtatCaisse, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonPrestation, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonSortirArg, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonConfigMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonConfigMsg, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonListeRapide, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonEtatCaisse, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonPrestation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonSortirArg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonLesVente, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
+                    .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jButtonTicketRayon, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonRetourMV, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonLogOut2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE))
+                    .addComponent(jButtonPeripherique, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
                 .addComponent(jPanelCardVendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelMenuVendeurLayout.createSequentialGroup()
-                    .addComponent(jButtonLangue, javax.swing.GroupLayout.PREFERRED_SIZE, 96, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 612, Short.MAX_VALUE)))
+                    .addComponent(jButtonLangue, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 623, Short.MAX_VALUE)))
             .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelMenuVendeurLayout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelMenuVendeurLayout.createSequentialGroup()
+                    .addComponent(jPanelVendeurTM, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 599, Short.MAX_VALUE)))
         );
 
         jPanelCard.add(jPanelMenuVendeur, "card5");
@@ -4568,16 +4679,12 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JFormattedTextField jFormattedTextFieldMontant;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
@@ -4588,7 +4695,6 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -4604,50 +4710,66 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel41;
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel45;
-    private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
-    private javax.swing.JLabel jLabel48;
     private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
-    private javax.swing.JLabel jLabel51;
     private javax.swing.JLabel jLabel52;
-    private javax.swing.JLabel jLabel53;
-    private javax.swing.JLabel jLabel54;
-    private javax.swing.JLabel jLabel55;
-    private javax.swing.JLabel jLabel56;
-    private javax.swing.JLabel jLabel57;
-    private javax.swing.JLabel jLabel58;
-    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelARDis;
     private javax.swing.JLabel jLabelARSorti;
+    private javax.swing.JLabel jLabelAdmin;
+    private javax.swing.JLabel jLabelAnnulerVente;
     private javax.swing.JLabel jLabelArticle;
+    private javax.swing.JLabel jLabelArticle1;
+    private javax.swing.JLabel jLabelAttente;
+    private javax.swing.JLabel jLabelBackground;
     private javax.swing.JLabel jLabelBackround;
     private javax.swing.JLabel jLabelCodbarreBG;
+    private javax.swing.JLabel jLabelConfigMsg;
     private javax.swing.JLabel jLabelDateJour;
     private javax.swing.JLabel jLabelDateTrans;
+    private javax.swing.JLabel jLabelDernierTicket;
     private javax.swing.JLabel jLabelEtatCaissTC;
+    private javax.swing.JLabel jLabelEtatCaisse;
     private javax.swing.JLabel jLabelEtatCaisseTR;
     private javax.swing.JLabel jLabelHT;
     private javax.swing.JLabel jLabelIdVendeur;
     private javax.swing.JLabel jLabelImageSt;
+    private javax.swing.JLabel jLabelLangue;
+    private javax.swing.JLabel jLabelLesVenteDu;
+    private javax.swing.JLabel jLabelLesVenteduMois;
+    private javax.swing.JLabel jLabelLesVentes;
+    private javax.swing.JLabel jLabelListRapide;
+    private javax.swing.JLabel jLabelLogout;
+    private javax.swing.JLabel jLabelLogoutMV;
+    private javax.swing.JLabel jLabelMenu;
     private javax.swing.JLabel jLabelMoisTot;
+    private javax.swing.JLabel jLabelMsgListeRapide;
     private javax.swing.JLabel jLabelNbClients;
     private javax.swing.JLabel jLabelNbClientsTot;
     private javax.swing.JLabel jLabelNbPiece;
     private javax.swing.JLabel jLabelNoTicket;
+    private javax.swing.JLabel jLabelNombreClient;
+    private javax.swing.JLabel jLabelNombreClient1;
+    private javax.swing.JLabel jLabelOuvrir;
+    private javax.swing.JLabel jLabelPeripherique;
+    private javax.swing.JLabel jLabelPrestation;
     private javax.swing.JLabel jLabelPrixTva;
     private javax.swing.JLabel jLabelRecu;
     private javax.swing.JLabel jLabelRemiseGen;
+    private javax.swing.JLabel jLabelRemiseGeneral;
     private javax.swing.JLabel jLabelRestTitle;
     private javax.swing.JLabel jLabelRestant;
+    private javax.swing.JLabel jLabelRetourArtic;
+    private javax.swing.JLabel jLabelRetourMV;
     private javax.swing.JLabel jLabelSTotal;
+    private javax.swing.JLabel jLabelSortirArgent;
+    private javax.swing.JLabel jLabelSuppArticle;
+    private javax.swing.JLabel jLabelTicketRayon;
     private javax.swing.JLabel jLabelTopMenuBG;
     private javax.swing.JLabel jLabelTotal;
     private javax.swing.JLabel jLabelTotalAutre;
@@ -4697,6 +4819,7 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelTicketRayon;
     private javax.swing.JPanel jPanelTopMenST;
     private javax.swing.JPanel jPanelTopMenu;
+    private javax.swing.JPanel jPanelVendeurTM;
     private javax.swing.JPanel jPanelVente;
     private javax.swing.JPasswordField jPasswordField;
     private javax.swing.JScrollPane jScrollPane1;
