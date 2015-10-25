@@ -258,6 +258,13 @@ public class JFVente extends javax.swing.JFrame {
         jLabelLogoutMV.setText(lang_var.getString("config_logout"));
         
         
+        
+        jLabelTicketNo.setText(lang_var.getString("info_ticket_no"));
+        jLabelDateVente.setText(lang_var.getString("info_date_vente"));
+        jLabelIDVendeur.setText(lang_var.getString("info_id_vendeur"));
+        jLabelPrix.setText(lang_var.getString("info_prix"));
+        jLabelTVA.setText(lang_var.getString("info_tva"));
+        jLabelRemise.setText(lang_var.getString("info_remise"));
       //  jLabel.setText(lang_var.getString("article"));
        
         
@@ -541,7 +548,15 @@ public class JFVente extends javax.swing.JFrame {
         jLabelTotal = new javax.swing.JLabel();
         codebarreArea = new javax.swing.JTextField();
         jLabelCodbarreBG = new javax.swing.JLabel();
+        jLabelTVA = new javax.swing.JLabel();
+        jLabelTicketNo = new javax.swing.JLabel();
+        jLabelRemise = new javax.swing.JLabel();
+        jLabelDateVente = new javax.swing.JLabel();
+        jLabelIDVendeur = new javax.swing.JLabel();
+        jLabelPrix = new javax.swing.JLabel();
         jLabelBackround = new javax.swing.JLabel();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        jTableVente1 = new JTable(myModelVente);
         jPanelGridRapiCat = new javax.swing.JPanel();
         jPanelProdRapid = new javax.swing.JPanel();
         jLabelMsgListeRapide = new javax.swing.JLabel();
@@ -1444,9 +1459,51 @@ public class JFVente extends javax.swing.JFrame {
         jPanelScanPanel.add(jLabelCodbarreBG);
         jLabelCodbarreBG.setBounds(0, 0, 550, 48);
 
+        jLabelTVA.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabelTVA.setText("TVA :");
+        jPanelScanPanel.add(jLabelTVA);
+        jLabelTVA.setBounds(410, 420, 60, 30);
+
+        jLabelTicketNo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabelTicketNo.setText("Ticket N° :");
+        jPanelScanPanel.add(jLabelTicketNo);
+        jLabelTicketNo.setBounds(10, 420, 120, 30);
+
+        jLabelRemise.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabelRemise.setText("Remise :");
+        jPanelScanPanel.add(jLabelRemise);
+        jLabelRemise.setBounds(270, 460, 120, 30);
+
+        jLabelDateVente.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabelDateVente.setText("Date Vente :");
+        jPanelScanPanel.add(jLabelDateVente);
+        jLabelDateVente.setBounds(10, 460, 120, 30);
+
+        jLabelIDVendeur.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabelIDVendeur.setText("ID Vendeur :");
+        jPanelScanPanel.add(jLabelIDVendeur);
+        jLabelIDVendeur.setBounds(10, 500, 120, 30);
+
+        jLabelPrix.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabelPrix.setText("Prix :");
+        jPanelScanPanel.add(jLabelPrix);
+        jLabelPrix.setBounds(270, 420, 60, 30);
+
         jLabelBackround.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ticketInfoBt2.png"))); // NOI18N
         jPanelScanPanel.add(jLabelBackround);
         jLabelBackround.setBounds(0, 403, 550, 150);
+
+        jScrollPane15.setPreferredSize(new java.awt.Dimension(600, 402));
+
+        jTableVente1.setBackground(new java.awt.Color(134, 185, 236));
+        jTableVente1.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
+        jTableVente1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jTableVente1.setFocusable(false);
+        jTableVente1.setRowHeight(35);
+        jScrollPane15.setViewportView(jTableVente1);
+
+        jPanelScanPanel.add(jScrollPane15);
+        jScrollPane15.setBounds(0, 54, 550, 343);
 
         jPanelGridRapiCat.setLayout(new java.awt.GridLayout(5, 2));
 
@@ -2227,7 +2284,7 @@ public class JFVente extends javax.swing.JFrame {
                         .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel10)
@@ -2311,7 +2368,7 @@ public class JFVente extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel13)
                             .addComponent(jLabel20))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                         .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2319,7 +2376,7 @@ public class JFVente extends javax.swing.JFrame {
                             .addComponent(jButton18))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 9, Short.MAX_VALUE))
+                .addGap(0, 5, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanelRechercheTicketLayout = new javax.swing.GroupLayout(jPanelRechercheTicket);
@@ -4732,11 +4789,13 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelConfigMsg;
     private javax.swing.JLabel jLabelDateJour;
     private javax.swing.JLabel jLabelDateTrans;
+    private javax.swing.JLabel jLabelDateVente;
     private javax.swing.JLabel jLabelDernierTicket;
     private javax.swing.JLabel jLabelEtatCaissTC;
     private javax.swing.JLabel jLabelEtatCaisse;
     private javax.swing.JLabel jLabelEtatCaisseTR;
     private javax.swing.JLabel jLabelHT;
+    private javax.swing.JLabel jLabelIDVendeur;
     private javax.swing.JLabel jLabelIdVendeur;
     private javax.swing.JLabel jLabelImageSt;
     private javax.swing.JLabel jLabelLangue;
@@ -4758,8 +4817,10 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelOuvrir;
     private javax.swing.JLabel jLabelPeripherique;
     private javax.swing.JLabel jLabelPrestation;
+    private javax.swing.JLabel jLabelPrix;
     private javax.swing.JLabel jLabelPrixTva;
     private javax.swing.JLabel jLabelRecu;
+    private javax.swing.JLabel jLabelRemise;
     private javax.swing.JLabel jLabelRemiseGen;
     private javax.swing.JLabel jLabelRemiseGeneral;
     private javax.swing.JLabel jLabelRestTitle;
@@ -4769,6 +4830,8 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelSTotal;
     private javax.swing.JLabel jLabelSortirArgent;
     private javax.swing.JLabel jLabelSuppArticle;
+    private javax.swing.JLabel jLabelTVA;
+    private javax.swing.JLabel jLabelTicketNo;
     private javax.swing.JLabel jLabelTicketRayon;
     private javax.swing.JLabel jLabelTopMenuBG;
     private javax.swing.JLabel jLabelTotal;
@@ -4828,6 +4891,7 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane12;
     private javax.swing.JScrollPane jScrollPane13;
     private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -4882,6 +4946,7 @@ public class JFVente extends javax.swing.JFrame {
     private javax.swing.JTable jTableSousTotal;
     private javax.swing.JTable jTableTotTVA;
     private javax.swing.JTable jTableVente;
+    private javax.swing.JTable jTableVente1;
     private javax.swing.JTextField jTextFieldLangue;
     private javax.swing.JTextField jTextFieldMontantRecu;
     private javax.swing.JTextField jTextFieldSearch;
