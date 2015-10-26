@@ -68,7 +68,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="239" max="-2" attributes="0"/>
                       <Component id="jPanelLogEnter" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="272" max="32767" attributes="0"/>
+                      <EmptySpace pref="227" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -244,7 +244,9 @@
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/images/delete-icon.png"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Annuler"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="lang_var.getString(&quot;annuler&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton15ActionPerformed"/>
@@ -363,7 +365,7 @@
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Curseur par d&#xe9;faut"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="focusable" type="boolean" value="false"/>
@@ -398,7 +400,7 @@
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Curseur par d&#xe9;faut"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="focusable" type="boolean" value="false"/>
@@ -433,7 +435,7 @@
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Curseur par d&#xe9;faut"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="focusable" type="boolean" value="false"/>
@@ -468,7 +470,7 @@
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Curseur par d&#xe9;faut"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="focusable" type="boolean" value="false"/>
@@ -503,7 +505,7 @@
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Curseur par d&#xe9;faut"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="focusable" type="boolean" value="false"/>
@@ -538,7 +540,7 @@
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Curseur par d&#xe9;faut"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="focusable" type="boolean" value="false"/>
@@ -573,7 +575,7 @@
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Curseur par d&#xe9;faut"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="focusable" type="boolean" value="false"/>
@@ -602,7 +604,7 @@
                     <Property name="borderPainted" type="boolean" value="false"/>
                     <Property name="contentAreaFilled" type="boolean" value="false"/>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Curseur par d&#xe9;faut"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="focusPainted" type="boolean" value="false"/>
                     <Property name="focusable" type="boolean" value="false"/>
@@ -1130,7 +1132,9 @@
                     <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="33" green="33" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="text" type="java.lang.String" value="Article :"/>
+                    <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                      <Connection code="lang_var.getString(&quot;top_article&quot;)" type="code"/>
+                    </Property>
                   </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1177,7 +1181,7 @@
                           <Font name="SansSerif" size="14" style="1"/>
                         </Property>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                          <Color id="Curseur par d&#xe9;faut"/>
+                          <Color id="Default Cursor"/>
                         </Property>
                         <Property name="focusable" type="boolean" value="false"/>
                         <Property name="rowHeight" type="int" value="35"/>
@@ -1297,7 +1301,7 @@
                       <Border info="null"/>
                     </Property>
                     <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                      <Color id="Curseur par d&#xe9;faut"/>
+                      <Color id="Default Cursor"/>
                     </Property>
                     <Property name="opaque" type="boolean" value="false"/>
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -1442,7 +1446,7 @@
                           <Font name="SansSerif" size="14" style="1"/>
                         </Property>
                         <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                          <Color id="Curseur par d&#xe9;faut"/>
+                          <Color id="Default Cursor"/>
                         </Property>
                         <Property name="focusable" type="boolean" value="false"/>
                         <Property name="rowHeight" type="int" value="35"/>
@@ -1482,7 +1486,9 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Tahoma" size="14" style="1"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="Listes des Produits Rapide"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="lang_var.getString(&quot;liste_rapide&quot;)" type="code"/>
+                </Property>
               </Properties>
             </Component>
             <Component class="javax.swing.JSeparator" name="jSeparator1">
@@ -2208,11 +2214,9 @@
                           <Component id="jButtonPrestation" alignment="0" max="32767" attributes="0"/>
                           <Component id="jButtonSortirArg" alignment="0" max="32767" attributes="0"/>
                           <Component id="jButtonLesVente" alignment="0" pref="85" max="32767" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jButtonTicketRayon" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jButtonRetourMV" alignment="0" max="32767" attributes="0"/>
-                              <Component id="jButtonLogOut2" alignment="0" pref="84" max="32767" attributes="0"/>
-                          </Group>
+                          <Component id="jButtonTicketRayon" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jButtonRetourMV" alignment="0" max="32767" attributes="0"/>
+                          <Component id="jButtonLogOut2" alignment="0" pref="85" max="32767" attributes="0"/>
                           <Component id="jButtonPeripherique" alignment="0" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -2401,7 +2405,7 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Curseur par d&#xe9;faut"/>
+                  <Color id="Default Cursor"/>
                 </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
@@ -2431,7 +2435,7 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Curseur par d&#xe9;faut"/>
+                  <Color id="Default Cursor"/>
                 </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
@@ -2461,7 +2465,7 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Curseur par d&#xe9;faut"/>
+                  <Color id="Default Cursor"/>
                 </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
@@ -2491,7 +2495,7 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Curseur par d&#xe9;faut"/>
+                  <Color id="Default Cursor"/>
                 </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
@@ -2521,7 +2525,7 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Curseur par d&#xe9;faut"/>
+                  <Color id="Default Cursor"/>
                 </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
@@ -2551,7 +2555,7 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Curseur par d&#xe9;faut"/>
+                  <Color id="Default Cursor"/>
                 </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
@@ -2581,7 +2585,7 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Curseur par d&#xe9;faut"/>
+                  <Color id="Default Cursor"/>
                 </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
@@ -2633,7 +2637,7 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Curseur par d&#xe9;faut"/>
+                  <Color id="Default Cursor"/>
                 </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
@@ -2663,7 +2667,7 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="contentAreaFilled" type="boolean" value="false"/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-                  <Color id="Curseur par d&#xe9;faut"/>
+                  <Color id="Default Cursor"/>
                 </Property>
                 <Property name="focusPainted" type="boolean" value="false"/>
                 <Property name="focusable" type="boolean" value="false"/>
@@ -2740,7 +2744,7 @@
                                           <Component id="jButton18" min="-2" pref="155" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace pref="18" max="32767" attributes="0"/>
+                                  <EmptySpace pref="20" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
@@ -2758,7 +2762,7 @@
                                           <EmptySpace type="separate" max="-2" attributes="0"/>
                                           <Group type="103" groupAlignment="0" attributes="0">
                                               <Component id="jSeparator6" alignment="0" max="32767" attributes="0"/>
-                                              <Group type="102" alignment="0" attributes="0">
+                                              <Group type="102" attributes="0">
                                                   <Group type="103" groupAlignment="0" attributes="0">
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <Component id="jLabelLesVenteDu" min="-2" max="-2" attributes="0"/>
@@ -2767,7 +2771,7 @@
                                                       </Group>
                                                       <Group type="102" alignment="0" attributes="0">
                                                           <Component id="jLabelNombreClient" min="-2" max="-2" attributes="0"/>
-                                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                                          <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                                                           <Component id="jLabelNbClients" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                   </Group>
@@ -2784,7 +2788,7 @@
                                       <Component id="jSeparator14" alignment="0" max="32767" attributes="0"/>
                                       <Component id="jSeparator15" min="-2" pref="569" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace max="32767" attributes="0"/>
+                                  <EmptySpace pref="12" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2846,7 +2850,7 @@
                                               <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
                                           </Group>
-                                          <EmptySpace pref="12" max="32767" attributes="0"/>
+                                          <EmptySpace pref="15" max="32767" attributes="0"/>
                                           <Component id="jSeparator15" min="-2" pref="10" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
@@ -2858,7 +2862,7 @@
                                           <Component id="jSeparator16" min="-2" pref="10" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <EmptySpace min="0" pref="5" max="32767" attributes="0"/>
+                                  <EmptySpace min="0" pref="9" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                         </DimensionLayout>
@@ -2925,7 +2929,9 @@
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/images/Slide-Show-icon.png"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Afficher"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="lang_var.getString(&quot;afficher&quot;)" type="code"/>
+                            </Property>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton9ActionPerformed"/>
@@ -2939,7 +2945,9 @@
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/images/Inkjet-Printer-icon.png"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Imprim Ticket"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="lang_var.getString(&quot;imprimer_ticket&quot;)" type="code"/>
+                            </Property>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
@@ -2960,7 +2968,9 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Tahoma" size="11" style="1"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Les ventes du :"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="lang_var.getString(&quot;vente_jour&quot;)" type="code"/>
+                            </Property>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelDateJour">
@@ -2976,7 +2986,9 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Tahoma" size="11" style="1"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Nombre de clients :"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="lang_var.getString(&quot;nombre_client&quot;)" type="code"/>
+                            </Property>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JSeparator" name="jSeparator6">
@@ -3018,7 +3030,9 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Tahoma" size="11" style="1"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Nombre de clients :"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="lang_var.getString(&quot;nombre_client&quot;)" type="code"/>
+                            </Property>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelNbClientsTot">
@@ -3034,7 +3048,9 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Tahoma" size="11" style="1"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Les ventes du mois de :"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="lang_var.getString(&quot;vente_mois&quot;)" type="code"/>
+                            </Property>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelMoisTot">
@@ -3055,7 +3071,9 @@
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/images/Slide-Show-icon.png"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Fonction X"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="lang_var.getString(&quot;fontion_x&quot;)" type="code"/>
+                            </Property>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton10ActionPerformed"/>
@@ -3099,7 +3117,9 @@
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/images/Slide-Show-icon.png"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Afficher Jour"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="lang_var.getString(&quot;afficher_jour&quot;)" type="code"/>
+                            </Property>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton18ActionPerformed"/>
@@ -3133,7 +3153,7 @@
                                       <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
-                              <EmptySpace pref="231" max="32767" attributes="0"/>
+                              <EmptySpace pref="261" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -3157,7 +3177,9 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Tahoma" size="36" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Sortir l&apos;argent de la caisse"/>
+                        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="lang_var.getString(&quot;soritr_argent_title&quot;)" type="code"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JPanel" name="jPanel6">
@@ -3195,20 +3217,18 @@
                                       <Component id="jSeparator9" max="32767" attributes="0"/>
                                   </Group>
                                   <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jSeparator11" min="-2" pref="289" max="-2" attributes="0"/>
-                                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="jLabelARSorti" min="-2" pref="90" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="0" attributes="0">
-                                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                                              <Component id="jLabelARDis" min="-2" pref="90" max="-2" attributes="0"/>
-                                          </Group>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jLabelARDis" min="-2" pref="90" max="-2" attributes="0"/>
                                       </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel37" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jLabelARSorti" min="-2" pref="90" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jSeparator11" alignment="1" min="-2" pref="289" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="45" max="32767" attributes="0"/>
                               </Group>
@@ -3267,7 +3287,9 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="SansSerif" size="14" style="0"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Montant sorti"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="lang_var.getString(&quot;montant_sorti&quot;)" type="code"/>
+                            </Property>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabel28">
@@ -3275,7 +3297,9 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="SansSerif" size="14" style="0"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Raison :"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="lang_var.getString(&quot;raison_sorti&quot;)" type="code"/>
+                            </Property>
                           </Properties>
                         </Component>
                         <Container class="javax.swing.JScrollPane" name="jScrollPane7">
@@ -3312,7 +3336,9 @@
                             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                               <Image iconType="3" name="/images/add-icon.png"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Sortir"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="lang_var.getString(&quot;valider&quot;)" type="code"/>
+                            </Property>
                           </Properties>
                           <Events>
                             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
@@ -3329,7 +3355,9 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Tahoma" size="14" style="1"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Cash disponible dans la caisse :"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="lang_var.getString(&quot;cash_disponible&quot;)" type="code"/>
+                            </Property>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JSeparator" name="jSeparator11">
@@ -3352,7 +3380,9 @@
                             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                               <Font name="Tahoma" size="14" style="1"/>
                             </Property>
-                            <Property name="text" type="java.lang.String" value="Cash sorti de la caisse :"/>
+                            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                              <Connection code="lang_var.getString(&quot;cash_sorti&quot;)" type="code"/>
+                            </Property>
                           </Properties>
                         </Component>
                         <Component class="javax.swing.JLabel" name="jLabelARSorti">
@@ -3514,8 +3544,10 @@
                         <Container class="javax.swing.JPanel" name="jPanel7">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                              <JTabbedPaneConstraints tabName="Total g&#xe9;n&#xe9;rale">
-                                <Property name="tabTitle" type="java.lang.String" value="Total g&#xe9;n&#xe9;rale"/>
+                              <JTabbedPaneConstraints tabName="&lt;User Code&gt;">
+                                <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;total_gen&quot;)" type="code"/>
+                                </Property>
                               </JTabbedPaneConstraints>
                             </Constraint>
                           </Constraints>
@@ -3560,7 +3592,9 @@
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                   <Image iconType="3" name="/images/Inkjet-Printer-icon.png"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="Printe"/>
+                                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;imprimer&quot;)" type="code"/>
+                                </Property>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbuttonPrintTotalGenActionPerformed"/>
@@ -3602,8 +3636,10 @@
                         <Container class="javax.swing.JPanel" name="jPanel8">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                              <JTabbedPaneConstraints tabName="Argent sorti">
-                                <Property name="tabTitle" type="java.lang.String" value="Argent sorti"/>
+                              <JTabbedPaneConstraints tabName="&lt;User Code&gt;">
+                                <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;total_sorti&quot;)" type="code"/>
+                                </Property>
                               </JTabbedPaneConstraints>
                             </Constraint>
                           </Constraints>
@@ -3652,8 +3688,10 @@
                         <Container class="javax.swing.JPanel" name="jPanel9">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                              <JTabbedPaneConstraints tabName="Total par cat&#xe9;gorie">
-                                <Property name="tabTitle" type="java.lang.String" value="Total par cat&#xe9;gorie"/>
+                              <JTabbedPaneConstraints tabName="&lt;User Code&gt;">
+                                <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;total_cat&quot;)" type="code"/>
+                                </Property>
                               </JTabbedPaneConstraints>
                             </Constraint>
                           </Constraints>
@@ -3698,7 +3736,9 @@
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                   <Image iconType="3" name="/images/Inkjet-Printer-icon.png"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="Printe"/>
+                                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;imprimer&quot;)" type="code"/>
+                                </Property>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonPrintCatActionPerformed"/>
@@ -3740,8 +3780,10 @@
                         <Container class="javax.swing.JPanel" name="jPanel10">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                              <JTabbedPaneConstraints tabName="Total Par TVA">
-                                <Property name="tabTitle" type="java.lang.String" value="Total Par TVA"/>
+                              <JTabbedPaneConstraints tabName="&lt;User Code&gt;">
+                                <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;total_tva&quot;)" type="code"/>
+                                </Property>
                               </JTabbedPaneConstraints>
                             </Constraint>
                           </Constraints>
@@ -3786,7 +3828,9 @@
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                   <Image iconType="3" name="/images/Inkjet-Printer-icon.png"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="Printe"/>
+                                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;imprimer&quot;)" type="code"/>
+                                </Property>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton17ActionPerformed"/>
@@ -3842,7 +3886,9 @@
                         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                           <Image iconType="3" name="/images/search-green-neon-icon.png"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Search"/>
+                        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="lang_var.getString(&quot;rechercher&quot;)" type="code"/>
+                        </Property>
                       </Properties>
                       <Events>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
@@ -3856,7 +3902,9 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="0" red="ff" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Total recette : "/>
+                        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="lang_var.getString(&quot;total_recette&quot;)" type="code"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabel36">
@@ -3864,7 +3912,9 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Tahoma" size="14" style="1"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Les ventes du :"/>
+                        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="lang_var.getString(&quot;vente_jour&quot;)" type="code"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JSeparator" name="jSeparator17">
@@ -3888,7 +3938,9 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="cc" red="0" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Total cash : "/>
+                        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="lang_var.getString(&quot;total_cash&quot;)" type="code"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelEtatCaissTC">
@@ -3907,7 +3959,9 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Tahoma" size="16" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Total autre : "/>
+                        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="lang_var.getString(&quot;total_autre&quot;)" type="code"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelTotalAutre">
@@ -3926,7 +3980,9 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="0" red="ff" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Total sorti : "/>
+                        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="lang_var.getString(&quot;total_sorti&quot;)" type="code"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelTotalSorti">
@@ -3948,7 +4004,9 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="33" green="99" red="0" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Total disponible : "/>
+                        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="lang_var.getString(&quot;total_disponible&quot;)" type="code"/>
+                        </Property>
                       </Properties>
                     </Component>
                     <Component class="javax.swing.JLabel" name="jLabelTotalDispo">
@@ -4010,8 +4068,10 @@
                         <Container class="javax.swing.JPanel" name="jPanel13">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                              <JTabbedPaneConstraints tabName="Liste Produit Rapide">
-                                <Property name="tabTitle" type="java.lang.String" value="Liste Produit Rapide"/>
+                              <JTabbedPaneConstraints tabName="&lt;User Code&gt;">
+                                <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;liste_rapide&quot;)" type="code"/>
+                                </Property>
                               </JTabbedPaneConstraints>
                             </Constraint>
                           </Constraints>
@@ -4093,7 +4153,9 @@
                                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                                   <Color blue="cc" green="99" red="66" type="rgb"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="Vider la liste"/>
+                                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;vider_liste&quot;)" type="code"/>
+                                </Property>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton11ActionPerformed"/>
@@ -4107,7 +4169,9 @@
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                   <Image iconType="3" name="/images/delete-icon.png"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="Supprimer"/>
+                                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;supprimer&quot;)" type="code"/>
+                                </Property>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton12ActionPerformed"/>
@@ -4142,7 +4206,9 @@
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                   <Image iconType="3" name="/images/search-green-neon-icon.png"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="Chercher"/>
+                                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;rechercher&quot;)" type="code"/>
+                                </Property>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonSearchActionPerformed"/>
@@ -4182,7 +4248,9 @@
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                   <Image iconType="3" name="/images/add-icon.png"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="Ajouter"/>
+                                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;ajouter&quot;)" type="code"/>
+                                </Property>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton13ActionPerformed"/>
@@ -4223,8 +4291,10 @@
                         <Container class="javax.swing.JPanel" name="jPanel14">
                           <Constraints>
                             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout" value="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout$JTabbedPaneConstraintsDescription">
-                              <JTabbedPaneConstraints tabName="Liste Cat&#xe9;gorie Rapide">
-                                <Property name="tabTitle" type="java.lang.String" value="Liste Cat&#xe9;gorie Rapide"/>
+                              <JTabbedPaneConstraints tabName="&lt;User Code&gt;">
+                                <Property name="tabTitle" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;liste_categorie&quot;)" type="code"/>
+                                </Property>
                               </JTabbedPaneConstraints>
                             </Constraint>
                           </Constraints>
@@ -4335,7 +4405,9 @@
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                   <Image iconType="3" name="/images/add-icon.png"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="Ajouter"/>
+                                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;ajouter&quot;)" type="code"/>
+                                </Property>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton14ActionPerformed"/>
@@ -4349,7 +4421,9 @@
                                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                                   <Image iconType="3" name="/images/delete-icon.png"/>
                                 </Property>
-                                <Property name="text" type="java.lang.String" value="Supprimer"/>
+                                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                                  <Connection code="lang_var.getString(&quot;supprimer&quot;)" type="code"/>
+                                </Property>
                               </Properties>
                               <Events>
                                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton16ActionPerformed"/>
@@ -4830,7 +4904,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Group type="102" attributes="0">
                                       <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="789" max="32767" attributes="0"/>
+                                      <EmptySpace min="0" pref="772" max="32767" attributes="0"/>
                                   </Group>
                                   <Component id="jScrollPane13" max="32767" attributes="0"/>
                               </Group>
@@ -4877,7 +4951,9 @@
                         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                           <Font name="Tahoma" size="36" style="0"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Prestations :"/>
+                        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                          <Connection code="lang_var.getString(&quot;config_prestation&quot;)" type="code"/>
+                        </Property>
                       </Properties>
                     </Component>
                   </SubComponents>

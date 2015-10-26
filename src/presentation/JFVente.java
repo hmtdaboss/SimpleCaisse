@@ -152,8 +152,8 @@ public class JFVente extends javax.swing.JFrame {
     private int idCalDetail = 0;
     
     /*Multi langues*/
-    String path ;
-    ResourceBundle lang_var ;
+    String path = "langues.langue_en";;
+    ResourceBundle lang_var = ResourceBundle.getBundle(path);
 
     public JFVente() {
         initComponents();
@@ -177,8 +177,8 @@ public class JFVente extends javax.swing.JFrame {
     /*Set le focus */
     private void initSmallThings() {
         jPasswordField.requestFocusInWindow();
-        path = "langues.langue_en";
-        lang_var = ResourceBundle.getBundle(path);
+        //path = "langues.langue_en";
+        //lang_var = ResourceBundle.getBundle(path);
         
         try {
             utilFluxLed = new UtilisationFlux(peri.getBalise(peri.CUSTOMER_DISPLAY_PORT));
@@ -821,7 +821,7 @@ public class JFVente extends javax.swing.JFrame {
         jButton15.setBackground(new java.awt.Color(102, 153, 204));
         jButton15.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButton15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete-icon.png"))); // NOI18N
-        jButton15.setText("Annuler");
+        jButton15.setText(lang_var.getString("annuler"));
         jButton15.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton15ActionPerformed(evt);
@@ -922,7 +922,7 @@ public class JFVente extends javax.swing.JFrame {
             .addGroup(jPanelLoginLayout.createSequentialGroup()
                 .addGap(239, 239, 239)
                 .addComponent(jPanelLogEnter, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(272, Short.MAX_VALUE))
+                .addContainerGap(227, Short.MAX_VALUE))
         );
         jPanelLoginLayout.setVerticalGroup(
             jPanelLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1381,7 +1381,7 @@ public class JFVente extends javax.swing.JFrame {
         jLabelNbPiece.setBounds(450, 24, 40, 20);
 
         jLabel5.setForeground(new java.awt.Color(255, 51, 51));
-        jLabel5.setText("Article :");
+        jLabel5.setText(lang_var.getString("top_article"));
         jPanelScanPanel.add(jLabel5);
         jLabel5.setBounds(390, 4, 50, 20);
 
@@ -1511,7 +1511,7 @@ public class JFVente extends javax.swing.JFrame {
         jPanelProdRapid.setLayout(new java.awt.GridLayout(5, 2));
 
         jLabelMsgListeRapide.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabelMsgListeRapide.setText("Listes des Produits Rapide");
+        jLabelMsgListeRapide.setText(lang_var.getString("liste_rapide"));
 
         javax.swing.GroupLayout jPanelVenteLayout = new javax.swing.GroupLayout(jPanelVente);
         jPanelVente.setLayout(jPanelVenteLayout);
@@ -2174,7 +2174,7 @@ public class JFVente extends javax.swing.JFrame {
 
         jButton9.setBackground(new java.awt.Color(134, 185, 236));
         jButton9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Slide-Show-icon.png"))); // NOI18N
-        jButton9.setText("Afficher");
+        jButton9.setText(lang_var.getString("afficher"));
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton9ActionPerformed(evt);
@@ -2183,7 +2183,7 @@ public class JFVente extends javax.swing.JFrame {
 
         jButton6.setBackground(new java.awt.Color(134, 185, 236));
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Inkjet-Printer-icon.png"))); // NOI18N
-        jButton6.setText("Imprim Ticket");
+        jButton6.setText(lang_var.getString("imprimer_ticket"));
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -2198,13 +2198,13 @@ public class JFVente extends javax.swing.JFrame {
         });
 
         jLabelLesVenteDu.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabelLesVenteDu.setText("Les ventes du :");
+        jLabelLesVenteDu.setText(lang_var.getString("vente_jour"));
 
         jLabelDateJour.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabelDateJour.setText("jLabel8");
 
         jLabelNombreClient.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabelNombreClient.setText("Nombre de clients :");
+        jLabelNombreClient.setText(lang_var.getString("nombre_client"));
 
         jLabelNbClients.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabelNbClients.setText("jLabel10");
@@ -2219,20 +2219,20 @@ public class JFVente extends javax.swing.JFrame {
         jLabel13.setText("Transaction avec cash  : ");
 
         jLabelNombreClient1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabelNombreClient1.setText("Nombre de clients :");
+        jLabelNombreClient1.setText(lang_var.getString("nombre_client"));
 
         jLabelNbClientsTot.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabelNbClientsTot.setText("jLabel8");
 
         jLabelLesVenteduMois.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabelLesVenteduMois.setText("Les ventes du mois de :");
+        jLabelLesVenteduMois.setText(lang_var.getString("vente_mois"));
 
         jLabelMoisTot.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabelMoisTot.setText("jLabel8");
 
         jButton10.setBackground(new java.awt.Color(134, 185, 236));
         jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Slide-Show-icon.png"))); // NOI18N
-        jButton10.setText("Fonction X");
+        jButton10.setText(lang_var.getString("fontion_x"));
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
@@ -2250,7 +2250,7 @@ public class JFVente extends javax.swing.JFrame {
 
         jButton18.setBackground(new java.awt.Color(134, 185, 236));
         jButton18.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Slide-Show-icon.png"))); // NOI18N
-        jButton18.setText("Afficher Jour");
+        jButton18.setText(lang_var.getString("afficher_jour"));
         jButton18.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton18ActionPerformed(evt);
@@ -2284,7 +2284,7 @@ public class JFVente extends javax.swing.JFrame {
                         .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 20, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel10)
@@ -2309,7 +2309,7 @@ public class JFVente extends javax.swing.JFrame {
                                         .addComponent(jLabelDateJour))
                                     .addGroup(jPanel1Layout.createSequentialGroup()
                                         .addComponent(jLabelNombreClient)
-                                        .addGap(18, 18, 18)
+                                        .addGap(39, 39, 39)
                                         .addComponent(jLabelNbClients)))
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addComponent(jScrollPane8)
@@ -2319,7 +2319,7 @@ public class JFVente extends javax.swing.JFrame {
                         .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jSeparator14)
                     .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 569, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2368,7 +2368,7 @@ public class JFVente extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel13)
                             .addComponent(jLabel20))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
                         .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -2376,7 +2376,7 @@ public class JFVente extends javax.swing.JFrame {
                             .addComponent(jButton18))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 5, Short.MAX_VALUE))
+                .addGap(0, 9, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanelRechercheTicketLayout = new javax.swing.GroupLayout(jPanelRechercheTicket);
@@ -2397,13 +2397,13 @@ public class JFVente extends javax.swing.JFrame {
         jPanelCardVendeur.add(jPanelRechercheTicket, "card3");
 
         jLabel29.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel29.setText("Sortir l'argent de la caisse");
+        jLabel29.setText(lang_var.getString("soritr_argent_title"));
 
         jLabel27.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jLabel27.setText("Montant sorti");
+        jLabel27.setText(lang_var.getString("montant_sorti"));
 
         jLabel28.setFont(new java.awt.Font("SansSerif", 0, 14)); // NOI18N
-        jLabel28.setText("Raison :");
+        jLabel28.setText(lang_var.getString("raison_sorti"));
 
         jTextPaneRaison.setBackground(new java.awt.Color(134, 185, 236));
         jTextPaneRaison.setSelectedTextColor(new java.awt.Color(134, 185, 236));
@@ -2413,7 +2413,7 @@ public class JFVente extends javax.swing.JFrame {
 
         jButton7.setBackground(new java.awt.Color(134, 185, 236));
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add-icon.png"))); // NOI18N
-        jButton7.setText("Sortir");
+        jButton7.setText(lang_var.getString("valider"));
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
@@ -2421,14 +2421,14 @@ public class JFVente extends javax.swing.JFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel8.setText("Cash disponible dans la caisse :");
+        jLabel8.setText(lang_var.getString("cash_disponible"));
 
         jLabelARDis.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelARDis.setForeground(new java.awt.Color(255, 0, 0));
         jLabelARDis.setText("0");
 
         jLabel37.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel37.setText("Cash sorti de la caisse :");
+        jLabel37.setText(lang_var.getString("cash_sorti"));
 
         jLabelARSorti.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabelARSorti.setForeground(new java.awt.Color(255, 0, 0));
@@ -2461,17 +2461,16 @@ public class JFVente extends javax.swing.JFrame {
                         .addGap(102, 102, 102))
                     .addComponent(jSeparator9))
                 .addGap(30, 30, 30)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(jPanel6Layout.createSequentialGroup()
-                            .addComponent(jLabel37)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabelARSorti, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel6Layout.createSequentialGroup()
-                            .addComponent(jLabel8)
-                            .addGap(18, 18, 18)
-                            .addComponent(jLabelARDis, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabelARDis, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addComponent(jLabel37)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jLabelARSorti, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jSeparator11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 289, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(45, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -2525,7 +2524,7 @@ public class JFVente extends javax.swing.JFrame {
                     .addGroup(jPanelSortirArgentLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(231, Short.MAX_VALUE))
+                .addContainerGap(261, Short.MAX_VALUE))
         );
         jPanelSortirArgentLayout.setVerticalGroup(
             jPanelSortirArgentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2546,7 +2545,7 @@ public class JFVente extends javax.swing.JFrame {
 
         jbuttonPrintTotalGen.setBackground(new java.awt.Color(102, 153, 204));
         jbuttonPrintTotalGen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Inkjet-Printer-icon.png"))); // NOI18N
-        jbuttonPrintTotalGen.setText("Printe");
+        jbuttonPrintTotalGen.setText(lang_var.getString("imprimer"));
         jbuttonPrintTotalGen.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jbuttonPrintTotalGenActionPerformed(evt);
@@ -2586,7 +2585,7 @@ public class JFVente extends javax.swing.JFrame {
                 .addGap(6, 6, 6))
         );
 
-        jTabbedPane1.addTab("Total générale", jPanel7);
+        jTabbedPane1.addTab(lang_var.getString("total_gen"), jPanel7);
 
         jTableArgentSortie.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jTableArgentSortie.setRowHeight(40);
@@ -2607,11 +2606,11 @@ public class JFVente extends javax.swing.JFrame {
                 .addGap(44, 44, 44))
         );
 
-        jTabbedPane1.addTab("Argent sorti", jPanel8);
+        jTabbedPane1.addTab(lang_var.getString("total_sorti"), jPanel8);
 
         jButtonPrintCat.setBackground(new java.awt.Color(102, 153, 204));
         jButtonPrintCat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Inkjet-Printer-icon.png"))); // NOI18N
-        jButtonPrintCat.setText("Printe");
+        jButtonPrintCat.setText(lang_var.getString("imprimer"));
         jButtonPrintCat.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonPrintCatActionPerformed(evt);
@@ -2651,11 +2650,11 @@ public class JFVente extends javax.swing.JFrame {
                 .addGap(6, 6, 6))
         );
 
-        jTabbedPane1.addTab("Total par catégorie", jPanel9);
+        jTabbedPane1.addTab(lang_var.getString("total_cat"), jPanel9);
 
         jButton17.setBackground(new java.awt.Color(102, 153, 204));
         jButton17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Inkjet-Printer-icon.png"))); // NOI18N
-        jButton17.setText("Printe");
+        jButton17.setText(lang_var.getString("imprimer"));
         jButton17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton17ActionPerformed(evt);
@@ -2695,13 +2694,13 @@ public class JFVente extends javax.swing.JFrame {
                 .addGap(6, 6, 6))
         );
 
-        jTabbedPane1.addTab("Total Par TVA", jPanel10);
+        jTabbedPane1.addTab(lang_var.getString("total_tva"), jPanel10);
 
         jDateChooser1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
 
         jButton2.setBackground(new java.awt.Color(102, 153, 204));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search-green-neon-icon.png"))); // NOI18N
-        jButton2.setText("Search");
+        jButton2.setText(lang_var.getString("rechercher"));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -2710,10 +2709,10 @@ public class JFVente extends javax.swing.JFrame {
 
         jLabel22.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel22.setText("Total recette : ");
+        jLabel22.setText(lang_var.getString("total_recette"));
 
         jLabel36.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel36.setText("Les ventes du :");
+        jLabel36.setText(lang_var.getString("vente_jour"));
 
         jLabelEtatCaisseTR.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabelEtatCaisseTR.setForeground(new java.awt.Color(255, 0, 51));
@@ -2721,21 +2720,21 @@ public class JFVente extends javax.swing.JFrame {
 
         jLabel35.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(0, 204, 51));
-        jLabel35.setText("Total cash : ");
+        jLabel35.setText(lang_var.getString("total_cash"));
 
         jLabelEtatCaissTC.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabelEtatCaissTC.setForeground(new java.awt.Color(0, 204, 51));
         jLabelEtatCaissTC.setText("0.00");
 
         jLabel43.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
-        jLabel43.setText("Total autre : ");
+        jLabel43.setText(lang_var.getString("total_autre"));
 
         jLabelTotalAutre.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabelTotalAutre.setText("0.00");
 
         jLabel45.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel45.setText("Total sorti : ");
+        jLabel45.setText(lang_var.getString("total_sorti"));
 
         jLabelTotalSorti.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabelTotalSorti.setForeground(new java.awt.Color(255, 0, 0));
@@ -2743,7 +2742,7 @@ public class JFVente extends javax.swing.JFrame {
 
         jLabel47.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(0, 153, 51));
-        jLabel47.setText("Total disponible : ");
+        jLabel47.setText(lang_var.getString("total_disponible"));
 
         jLabelTotalDispo.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jLabelTotalDispo.setForeground(new java.awt.Color(0, 153, 51));
@@ -2847,7 +2846,7 @@ public class JFVente extends javax.swing.JFrame {
         jTabbedPane3.setFont(new java.awt.Font("SansSerif", 1, 14)); // NOI18N
 
         jButton11.setBackground(new java.awt.Color(102, 153, 204));
-        jButton11.setText("Vider la liste");
+        jButton11.setText(lang_var.getString("vider_liste"));
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
@@ -2856,7 +2855,7 @@ public class JFVente extends javax.swing.JFrame {
 
         jButton12.setBackground(new java.awt.Color(102, 153, 204));
         jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete-icon.png"))); // NOI18N
-        jButton12.setText("Supprimer");
+        jButton12.setText(lang_var.getString("supprimer"));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
@@ -2876,7 +2875,7 @@ public class JFVente extends javax.swing.JFrame {
 
         jButtonSearch.setBackground(new java.awt.Color(102, 153, 204));
         jButtonSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/search-green-neon-icon.png"))); // NOI18N
-        jButtonSearch.setText("Chercher");
+        jButtonSearch.setText(lang_var.getString("rechercher"));
         jButtonSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonSearchActionPerformed(evt);
@@ -2890,7 +2889,7 @@ public class JFVente extends javax.swing.JFrame {
 
         jButton13.setBackground(new java.awt.Color(102, 153, 204));
         jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add-icon.png"))); // NOI18N
-        jButton13.setText("Ajouter");
+        jButton13.setText(lang_var.getString("ajouter"));
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
@@ -2958,7 +2957,7 @@ public class JFVente extends javax.swing.JFrame {
                 .addGap(36, 36, 36))
         );
 
-        jTabbedPane3.addTab("Liste Produit Rapide", jPanel13);
+        jTabbedPane3.addTab(lang_var.getString("liste_rapide"), jPanel13);
 
         jListCat.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jListCat.setModel(myModelCat);
@@ -2970,7 +2969,7 @@ public class JFVente extends javax.swing.JFrame {
 
         jButton14.setBackground(new java.awt.Color(102, 153, 204));
         jButton14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add-icon.png"))); // NOI18N
-        jButton14.setText("Ajouter");
+        jButton14.setText(lang_var.getString("ajouter"));
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
@@ -2979,7 +2978,7 @@ public class JFVente extends javax.swing.JFrame {
 
         jButton16.setBackground(new java.awt.Color(102, 153, 204));
         jButton16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/delete-icon.png"))); // NOI18N
-        jButton16.setText("Supprimer");
+        jButton16.setText(lang_var.getString("supprimer"));
         jButton16.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton16ActionPerformed(evt);
@@ -3032,7 +3031,7 @@ public class JFVente extends javax.swing.JFrame {
                 .addContainerGap(40, Short.MAX_VALUE))
         );
 
-        jTabbedPane3.addTab("Liste Catégorie Rapide", jPanel14);
+        jTabbedPane3.addTab(lang_var.getString("liste_categorie"), jPanel14);
 
         javax.swing.GroupLayout jPanelListeRapideLayout = new javax.swing.GroupLayout(jPanelListeRapide);
         jPanelListeRapide.setLayout(jPanelListeRapideLayout);
@@ -3268,7 +3267,7 @@ public class JFVente extends javax.swing.JFrame {
         jScrollPane13.setViewportView(jTablePrestation);
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel34.setText("Prestations :");
+        jLabel34.setText(lang_var.getString("config_prestation"));
 
         javax.swing.GroupLayout jPanelPrestationLayout = new javax.swing.GroupLayout(jPanelPrestation);
         jPanelPrestation.setLayout(jPanelPrestationLayout);
@@ -3279,7 +3278,7 @@ public class JFVente extends javax.swing.JFrame {
                 .addGroup(jPanelPrestationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelPrestationLayout.createSequentialGroup()
                         .addComponent(jLabel34)
-                        .addGap(0, 789, Short.MAX_VALUE))
+                        .addGap(0, 772, Short.MAX_VALUE))
                     .addComponent(jScrollPane13))
                 .addContainerGap())
         );
@@ -3400,10 +3399,9 @@ public class JFVente extends javax.swing.JFrame {
                     .addComponent(jButtonPrestation, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonSortirArg, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jButtonLesVente, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
-                    .addGroup(jPanelMenuVendeurLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jButtonTicketRayon, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonRetourMV, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonLogOut2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 84, Short.MAX_VALUE))
+                    .addComponent(jButtonTicketRayon, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonRetourMV, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonLogOut2, javax.swing.GroupLayout.DEFAULT_SIZE, 85, Short.MAX_VALUE)
                     .addComponent(jButtonPeripherique, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(27, 27, 27)
                 .addComponent(jPanelCardVendeur, javax.swing.GroupLayout.PREFERRED_SIZE, 583, javax.swing.GroupLayout.PREFERRED_SIZE)
