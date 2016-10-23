@@ -5,6 +5,7 @@
  */
 package model;
 
+import Utile.MethodeUtile;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
@@ -17,8 +18,13 @@ import transferObject.Vente;
  */
 public class JTableVente extends AbstractTableModel {
 
-    private final String[] columnNames = {"Libellé ",
-    "Prix" ,"Qté", "Total","%", "TVA"};
+    private final String[] columnNames = {
+        MethodeUtile.getInstance().var_lang().getString("libelle"),
+        MethodeUtile.getInstance().var_lang().getString("prix") ,
+        MethodeUtile.getInstance().var_lang().getString("qte"), 
+        MethodeUtile.getInstance().var_lang().getString("total"),
+        "%", 
+        MethodeUtile.getInstance().var_lang().getString("tva")};
     private ArrayList<Vente> liste;
     NumberFormat formatter = new DecimalFormat("##,##0.00 €");
     NumberFormat percentFormat = NumberFormat.getPercentInstance();

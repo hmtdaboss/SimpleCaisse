@@ -9,6 +9,7 @@ import dao.DAORecetteJournaliere;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Calendar;
 import transferObject.RecetteJournaliere;
 
 /**
@@ -35,13 +36,19 @@ public class DAORecetteJournaliereMySQL implements DAORecetteJournaliere {
     @Override
     public ArrayList<RecetteJournaliere> selectRecette(int numeroMois, String ordre) {
         ArrayList<RecetteJournaliere> myList = new ArrayList();
-        String num = "0" + numeroMois;
+        String num = Integer.toString(numeroMois);
+        if(numeroMois < 10 ){
+            num = "0" + numeroMois;
+        }
+        Calendar c = Calendar.getInstance();
+        int year = c.get(Calendar.YEAR);
         String req = "select sum(rec.recette), cal.idCalendrier, cal.dateJour "
                 + "from calendrier cal "
                 + "join recettejournaliere rec on cal.idCalendrier = rec.idcalendrier "
-                + "where strftime('%m', cal.dateJour) = '" + num
+                + "where strftime('%Y', cal.dateJour) = '"+year+"' and "
+                + "strftime('%m', cal.dateJour) = '" + num
                 + "' group by cal.idCalendrier"
-                + " order by sum(rec.recette) " + ordre;
+                + " order by cal.idCalendrier " + ordre;
 
         ResultSet resu = ConnexionMySQL.getInstance().selectQuery(req);
         System.out.println(req);

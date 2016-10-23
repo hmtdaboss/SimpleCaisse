@@ -5,9 +5,11 @@
  */
 package model;
 
+import Utile.PeripheriqueXML;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
 import java.util.ArrayList;
+import java.util.ResourceBundle;
 import javax.swing.table.AbstractTableModel;
 import transferObject.Transaction;
 
@@ -16,8 +18,11 @@ import transferObject.Transaction;
  * @author Himmat
  */
 public class JTableTransaction extends AbstractTableModel {
-
-    private String[] columnNames = {"N° Ticket", "Date ", "Heure", "Total", "id Vendeur", "Magasin"};
+    private PeripheriqueXML peri = new PeripheriqueXML();
+    String path = "langues." + peri.getBalise(peri.LANGUES_CHOOSEN) ;    
+    ResourceBundle lang_var = ResourceBundle.getBundle(path);
+    
+    private String[] columnNames = {lang_var.getString("libelle"), "Date ", "Heure", "Total", "id Vendeur", "Magasin"};
     private ArrayList<Transaction> liste;
     NumberFormat formatter = new DecimalFormat("##,##0.00 €");
     public JTableTransaction(ArrayList<Transaction> liste) {

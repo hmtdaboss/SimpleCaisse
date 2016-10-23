@@ -7,6 +7,7 @@ package Utile;
 
 import java.awt.EventQueue;
 import java.text.ParseException;
+import java.util.ResourceBundle;
 import javax.swing.JComponent;
 import javax.swing.JFormattedTextField;
 import javax.swing.JPanel;
@@ -67,5 +68,11 @@ public class MethodeUtile {
             numMois = 1;
         }
         return nomMois[numMois];
+    }
+    public ResourceBundle var_lang(){
+        PeripheriqueXML peri = new PeripheriqueXML();
+        String path = "langues." + peri.getBalise(peri.LANGUES_CHOOSEN) ;    
+        ResourceBundle lang_var = ResourceBundle.getBundle(path);
+        return lang_var;
     }
 }

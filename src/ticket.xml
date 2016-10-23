@@ -32,4 +32,10 @@
   <customerDisplayPort>
     <line>COM4</line>
   </customerDisplayPort>
+  <allLangues>
+    <line>Francais,English,Dutch</line>
+  </allLangues>
+  <langueChoisi>
+    <line>Francais</line>
+  </langueChoisi>
 </ticket>

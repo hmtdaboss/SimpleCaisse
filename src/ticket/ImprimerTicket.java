@@ -38,7 +38,7 @@ import transferObject.Vente;
  */
 public class ImprimerTicket {
 
-    private NumberFormat formatter = new DecimalFormat("##,##0.00 €");
+    private NumberFormat formatter = new DecimalFormat("##,##0.00");
     private BasicTicket ticket;
     private String heureTicket;
     private String dateTicket;
@@ -72,7 +72,7 @@ public class ImprimerTicket {
 
             @Override
             protected Font getBaseFont() {
-                return new Font("Times New Roman", Font.PLAIN, 12);
+                return new Font("TimesRoman", Font.PLAIN, 10);
             }
 
             @Override
@@ -101,11 +101,11 @@ public class ImprimerTicket {
             String qte = formatt.format(vente.getQuantite());
             if (vente.getLibelleProduit().length() > 13) {
                 String ligne1 = vente.getLibelleProduit().substring(0, 14);
-                itemLine.addText(5, ligne1.toLowerCase() + "#" + prixUnitaire + "#" + qte + "#" + prixTotal);
-                itemLine.addText(1, "     -" + vente.getLibelleProduit().substring(12,
-                        vente.getLibelleProduit().length()).toLowerCase());
+                itemLine.addText(5, ligne1.toUpperCase()+ "#" + prixUnitaire + "#" + qte + "#" + prixTotal);
+                itemLine.addText(1, "     -" + vente.getLibelleProduit().substring(13,
+                        vente.getLibelleProduit().length()).toUpperCase());
             } else {
-                itemLine.addText(5, vente.getLibelleProduit().toLowerCase() + "#" + prixUnitaire + "#" + qte + "#" + prixTotal);
+                itemLine.addText(5, vente.getLibelleProduit().toUpperCase() + "#" + prixUnitaire + "#" + qte + "#" + prixTotal);
             }
 
         }
@@ -114,6 +114,7 @@ public class ImprimerTicket {
         String total = formatter.format(infoTicket.getSommeTotal());
         String sommeRendu = formatter.format(infoTicket.getSommeRendu());
         itemLine.addText(1, "Total : " + total);
+        itemLine.textsize = 25;
         itemLine.addText(1, "Rendu : " + sommeRendu);
 
         for (SousTotal mode : infoTicket.getListeST()) {

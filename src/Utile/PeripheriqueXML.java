@@ -39,6 +39,8 @@ public class PeripheriqueXML {
     public final String PRINTER_TICKET_RAYON = "printerTicketRayon";
     public final String PRINTER_TICKET_RAYON_PORT = "printerTicketRayonPort";
     public final String CUSTOMER_DISPLAY_PORT = "customerDisplayPort";
+    public final String LANGUES = "allLangues";
+    public final String LANGUES_CHOOSEN = "langueChoisi";
 
     public PeripheriqueXML() {
         SAXBuilder sxb = new SAXBuilder();
