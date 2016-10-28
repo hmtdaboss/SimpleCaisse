@@ -17,11 +17,11 @@ public class ConnexionMySQL implements Connexion {
 
     /* Constructeur : ouvre la connexion */
     public ConnexionMySQL() {
-//        try {
-//            connectionEnServer();
-//        } catch (SQLException ex) {
+        try {
+            connectionEnServer();
+        } catch (SQLException ex) {
             connectionSQLite();
-        //}
+        }
     }
 
     private void connectionSQLite() {
@@ -49,7 +49,7 @@ public class ConnexionMySQL implements Connexion {
             JOptionPane.showMessageDialog(null, classe.toString(),
                     "Avertissement", JOptionPane.ERROR_MESSAGE);
 
-        }
+        } 
         connected = false;
         connectedServer = false;
 
@@ -103,7 +103,6 @@ public class ConnexionMySQL implements Connexion {
         } else {
             JOptionPane.showMessageDialog(null, "Objet non connecte! Echec fct.",
                     "Avertissement", JOptionPane.ERROR_MESSAGE);
-
         }
         return m_rs;
     }
