@@ -42,13 +42,27 @@ public class DAORecetteJournaliereMySQL implements DAORecetteJournaliere {
         }
         Calendar c = Calendar.getInstance();
         int year = c.get(Calendar.YEAR);
-        String req = "select sum(rec.recette), cal.idCalendrier, cal.dateJour "
+        
+        String req = "";
+        if(ConnexionMySQL.connectedServer){
+            req = "select sum(rec.recette), cal.idCalendrier, cal.dateJour "
+                + "from calendrier cal "
+                + "join recettejournaliere rec on cal.idCalendrier = rec.idcalendrier "
+                + "where DATE_FORMAT(cal.dateJour ,'%Y')  = '"+year+"' and "
+                + "DATE_FORMAT(cal.dateJour ,'%m')  = '" + num
+                + "' group by cal.idCalendrier"
+                + " order by cal.idCalendrier " + ordre;
+        }else{
+            req = "select sum(rec.recette), cal.idCalendrier, cal.dateJour "
                 + "from calendrier cal "
                 + "join recettejournaliere rec on cal.idCalendrier = rec.idcalendrier "
                 + "where strftime('%Y', cal.dateJour) = '"+year+"' and "
                 + "strftime('%m', cal.dateJour) = '" + num
                 + "' group by cal.idCalendrier"
                 + " order by cal.idCalendrier " + ordre;
+        }
+        
+        
 
         ResultSet resu = ConnexionMySQL.getInstance().selectQuery(req);
         System.out.println(req);
@@ -68,13 +82,25 @@ public class DAORecetteJournaliereMySQL implements DAORecetteJournaliere {
     @Override
     public ArrayList<RecetteJournaliere> selectRecetteMois(int annee, String ordre) {
         ArrayList<RecetteJournaliere> myList = new ArrayList();
-
-        String req = "select strftime('%m', cal.dateJour), sum(rec.recette) "
+        
+        String req = "";
+        if(ConnexionMySQL.connectedServer){
+            req = "select cal.dateJour, sum(rec.recette) "
+                + "from calendrier cal "
+                + "join recettejournaliere rec on cal.idCalendrier = rec.idcalendrier "
+                + "where DATE_FORMAT(dateJour , '%Y') = '" + annee
+                + "' group by DATE_FORMAT(cal.dateJour ,'%m' )"
+                + " order by sum(rec.recette) " + ordre;
+        }else{
+           req = "select strftime('%m', cal.dateJour), sum(rec.recette) "
                 + "from calendrier cal "
                 + "join recettejournaliere rec on cal.idCalendrier = rec.idcalendrier "
                 + "where strftime('%Y',dateJour) = '" + annee
                 + "' group by strftime('%m', cal.dateJour)"
-                + " order by sum(rec.recette) " + ordre;
+                + " order by sum(rec.recette) " + ordre; 
+        }
+        
+        
 
         ResultSet resu = ConnexionMySQL.getInstance().selectQuery(req);
 
@@ -95,10 +121,20 @@ public class DAORecetteJournaliereMySQL implements DAORecetteJournaliere {
     public int nbVenteMois(int numeroMois) {
         String num = "0" + numeroMois;
         int nbTuble = 0;
-        String requete = "SELECT count(*) FROM ventes ven "
+        
+        String requete = "";
+        if(ConnexionMySQL.connectedServer){
+            requete  = "SELECT count(*) FROM ventes ven "
+                + "join calendrier cal on cal.idCalendrier = ven.idCalendrier "
+                + "where DATE_FORMAT(cal.dateJour , '%m') ='" + num
+                + "'";
+        }else{
+            requete  = "SELECT count(*) FROM ventes ven "
                 + "join calendrier cal on cal.idCalendrier = ven.idCalendrier "
                 + "where strftime('%m', cal.dateJour) ='" + num
                 + "'";
+        }
+       
         ResultSet resu = ConnexionMySQL.getInstance().selectQuery(requete);
 
         try {

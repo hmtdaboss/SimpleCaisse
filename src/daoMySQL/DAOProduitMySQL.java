@@ -126,8 +126,21 @@ public class DAOProduitMySQL implements DAOProduit {
     @Override
     public ArrayList<Produit> selectTopProduitMois(int numeroMois, int limit) {
         ArrayList<Produit> myList = new ArrayList();
+        
+        String req = "";
+        
+        if(ConnexionMySQL.connectedServer){
+            req = "SELECT pro.libelle, count(*) "
+                + "from produit pro "
+                + "join nbproduitvendu ven on pro.codebarre=ven.codebarre "
+                + "join ventes ven2 on ven.idVente=ven2.idVente "
+                + " join calendrier cal on ven2.idCalendrier = cal.idCalendrier "
+                + "where DATE_FORMAT(cal.dateJour ,'%m' ) = "+numeroMois
+                + " group by pro.codebarre "
+                + "limit "+limit;
 
-        String req = "SELECT pro.libelle, count(*) "
+        }else{
+             req = "SELECT pro.libelle, count(*) "
                 + "from produit pro "
                 + "join nbproduitvendu ven on pro.codebarre=ven.codebarre "
                 + "join ventes ven2 on ven.idVente=ven2.idVente "
@@ -135,7 +148,8 @@ public class DAOProduitMySQL implements DAOProduit {
                 + "where strftime('%m', cal.dateJour) = "+numeroMois
                 + " group by pro.codebarre "
                 + "limit "+limit;
-        
+        }
+                 
         ResultSet resu = ConnexionMySQL.getInstance().selectQuery(req);
         try {
             while (resu.next()) {

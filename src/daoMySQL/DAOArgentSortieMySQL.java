@@ -40,10 +40,19 @@ public class DAOArgentSortieMySQL implements DAOArgentSortie {
         ArrayList<ArgentSortie> myList = new ArrayList();
         /*¨String String codebarre, String libelle, double prixAchat, 
          double prixVente, String nomCat, String nomMagasin) {*/
-        String req = "Select strftime('%Y-%m-%d', cal.dateJour), tra.somme, tra.raison "
+          String req = "";
+        if(ConnexionMySQL.connectedServer){
+             req = "Select  DATE_FORMAT(cal.dateJour , '%Y-%m-%d' ) , tra.somme, tra.raison "
                 + "From transac tra "
                 + "join calendrier cal on tra.idCalendrier = cal.idCalendrier "
                 + "where tra.idEmploye = " + idEmp + " and tra.idCalendrier = "+idCal;
+        }else{
+             req = "Select strftime('%Y-%m-%d', cal.dateJour), tra.somme, tra.raison "
+                + "From transac tra "
+                + "join calendrier cal on tra.idCalendrier = cal.idCalendrier "
+                + "where tra.idEmploye = " + idEmp + " and tra.idCalendrier = "+idCal;
+        }
+        
 
         ResultSet resu = ConnexionMySQL.getInstance().selectQuery(req);
         System.out.println(req);

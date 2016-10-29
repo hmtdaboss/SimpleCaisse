@@ -12,13 +12,14 @@ public class ConnexionMySQL implements Connexion {
     private Connection conn; //objet de connexion à la BDD
     private Statement stat;//objet permettant d'effectuer des requêtes simples
     private boolean connected;//variable permettant de savoir si on est connecté à une BDD
-    private boolean connectedServer;
+    public static boolean connectedServer;
     private static final ConnexionMySQL uniqueInstance = new ConnexionMySQL();
 
     /* Constructeur : ouvre la connexion */
     public ConnexionMySQL() {
         try {
             connectionEnServer();
+            System.out.println("Connecter en serveur");
         } catch (SQLException ex) {
             connectionSQLite();
         }
@@ -32,6 +33,7 @@ public class ConnexionMySQL implements Connexion {
             stat = conn.createStatement();
             System.out.println("Connexion a " + DBPath + " avec succès");
             connected = true;
+            ConnexionMySQL.connectedServer = false;
         } catch (ClassNotFoundException | SQLException notFoundException) {
             System.out.println("Erreur de connecxion");
             connected = false;
@@ -51,7 +53,7 @@ public class ConnexionMySQL implements Connexion {
 
         } 
         connected = false;
-        connectedServer = false;
+       
 
         String url = "jdbc:mysql://" + info.getIP() + "/" + info.getNomBase();
         // Connect to the database
@@ -60,7 +62,7 @@ public class ConnexionMySQL implements Connexion {
 
         stat = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
         connected = true;
-        connectedServer = true;
+        ConnexionMySQL.connectedServer = true;
     }
 
     /* ferme la connexion. */

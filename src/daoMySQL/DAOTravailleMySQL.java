@@ -26,13 +26,28 @@ public class DAOTravailleMySQL implements DAOTravaille {
     @Override
     public ArrayList<Travaille> selectPrestationEmploye(int idEmploye) {
         ArrayList<Travaille> myList = new ArrayList();
-        String req = "select strftime('%Y-%m-%d', cal.dateJour), tra.heuredebut, tra.heureFin, mag.nomMagasin , em.nom "
+        
+        String req = "";
+        
+        if(ConnexionMySQL.connectedServer){
+            req = "select DATE_FORMAT(cal.dateJour , '%Y-%m-%d'), tra.heuredebut, tra.heureFin, mag.nomMagasin , em.nom "
                 + "from travaille tra "
                 + "join employe em on tra.idEmploye = em.idEmploye "
                 + "join magasin mag on tra.idMag = mag.idMag "
                 + "join calendrier cal on tra.idCalendrier = cal.idCalendrier "
                 + "where tra.idEmploye =" + idEmploye;
 
+        }else{
+            req = "select strftime('%Y-%m-%d', cal.dateJour), tra.heuredebut, tra.heureFin, mag.nomMagasin , em.nom "
+                + "from travaille tra "
+                + "join employe em on tra.idEmploye = em.idEmploye "
+                + "join magasin mag on tra.idMag = mag.idMag "
+                + "join calendrier cal on tra.idCalendrier = cal.idCalendrier "
+                + "where tra.idEmploye =" + idEmploye;
+
+        }
+        
+       
         ResultSet resu = ConnexionMySQL.getInstance().selectQuery(req);
         try {
             while (resu.next()) {
@@ -51,11 +66,24 @@ public class DAOTravailleMySQL implements DAOTravaille {
     @Override
     public ArrayList<Travaille> selectPrestationEmploye() {
         ArrayList<Travaille> myList = new ArrayList();
-        String req = "select strftime('%Y-%m-%d', cal.dateJour), tra.heuredebut, tra.heureFin, mag.nomMagasin , em.nom "
+        String req = "";
+        
+        if(ConnexionMySQL.connectedServer){
+            req = "select DATE_FORMAT(cal.dateJour , '%Y-%m-%d') , tra.heuredebut, tra.heureFin, mag.nomMagasin , em.nom "
                 + "from travaille tra "
                 + "join employe em on tra.idEmploye = em.idEmploye "
                 + "join magasin mag on tra.idMag = mag.idMag "
                 + "join calendrier cal on tra.idCalendrier = cal.idCalendrier ";
+        }else{
+            req = "select strftime('%Y-%m-%d', cal.dateJour), tra.heuredebut, tra.heureFin, mag.nomMagasin , em.nom "
+                + "from travaille tra "
+                + "join employe em on tra.idEmploye = em.idEmploye "
+                + "join magasin mag on tra.idMag = mag.idMag "
+                + "join calendrier cal on tra.idCalendrier = cal.idCalendrier ";
+        }
+        
+        
+        
         System.out.println(req);
         ResultSet resu = ConnexionMySQL.getInstance().selectQuery(req);
         try {
@@ -78,13 +106,29 @@ public class DAOTravailleMySQL implements DAOTravaille {
         }
         String num = "0"+numeroMois;
         ArrayList<Travaille> myList = new ArrayList();
-        String req = "select strftime('%Y-%m-%d', cal.dateJour), tra.heuredebut, tra.heureFin, mag.nomMagasin , em.nom "
+        
+        
+        String req = "";
+        
+        if(ConnexionMySQL.connectedServer){
+            req = "select DATE_FORMAT(cal.dateJour , '%Y-%m-%d'), tra.heuredebut, tra.heureFin, mag.nomMagasin , em.nom "
+                + "from travaille tra "
+                + "join employe em on tra.idEmploye = em.idEmploye "
+                + "join magasin mag on tra.idMag = mag.idMag "
+                + "join calendrier cal on tra.idCalendrier = cal.idCalendrier "
+                + "where em.nom like '"+ idEmp + "' and DATE_FORMAT(cal.dateJour , '%m') like '"+num 
+                +"' and DATE_FORMAT(cal.dateJour , '%Y') like '"+annee +"'";
+        }else{
+            req = "select strftime('%Y-%m-%d', cal.dateJour), tra.heuredebut, tra.heureFin, mag.nomMagasin , em.nom "
                 + "from travaille tra "
                 + "join employe em on tra.idEmploye = em.idEmploye "
                 + "join magasin mag on tra.idMag = mag.idMag "
                 + "join calendrier cal on tra.idCalendrier = cal.idCalendrier "
                 + "where em.nom like '"+ idEmp + "' and strftime('%m',cal.dateJour) like '"+num 
                 +"' and strftime('%Y',cal.dateJour) like '"+annee +"'";
+        }
+        
+    
 
         ResultSet resu = ConnexionMySQL.getInstance().selectQuery(req);
         System.out.println(req);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Serveur>
    <IP>localhost</IP>
-   <nombase>xtra</nombase>
+   <nombase>extravideo</nombase>
    <port>3306</port>
    <username>root</username>
    <password>root</password>
